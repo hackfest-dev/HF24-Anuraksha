@@ -2,7 +2,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/hackfest-dev/HF24-Anuraksha">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Anuraksha</h3>
@@ -17,14 +17,14 @@
   </p>
 </p>
 
-![Downloads](https://img.shields.io/github/downloads/ShaanCoding/ReadME-Generator/total) ![Contributors](https://img.shields.io/github/contributors/ShaanCoding/ReadME-Generator?color=dark-green) ![Issues](https://img.shields.io/github/issues/ShaanCoding/ReadME-Generator) ![License](https://img.shields.io/github/license/ShaanCoding/ReadME-Generator) 
+![Downloads]( https://img.shields.io/badge/any_text-you_like-blue) ![Contributors](https://img.shields.io/badge/contributors-3-darkgreen) ![Issues](https://img.shields.io/github/issues/ShaanCoding/ReadME-Generator) ![License](https://img.shields.io/github/license/ShaanCoding/ReadME-Generator) 
 
 ## Table Of Contents
 
 * [About the Project](#about-the-project)
 * [Built With](#built-with)
 * [Usage](#usage)
-* [Contribution](#contribution)
+* [Contributors](#contributors)
 
 
 ## About The Project
@@ -70,7 +70,7 @@ Community Emergency Response Network (CERN) is a technology-driven initiative ai
 
 
 
-## Contribution
+## Contributors
 
 [Satyam Kumar](https://github.com/satyamksharma) 
 
