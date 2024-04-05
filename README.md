@@ -44,13 +44,28 @@
 
 
 
-Existing support systems fall short during emergencies, leaving individuals and their close ones overwhelmed. ⁤⁤Immediate help is necessary, yet lacking. ⁤⁤There is a need for a network of rapid responders within local communities, facilitated by accessible technology. 
-Existing emergency systems remain fragmented, underutilized, and lacking integration, hindering faster and more reliable assistance where it's most needed. ⁤
+Community Emergency Response Network (CERN) is a technology-driven initiative aimed at addressing the shortcomings of existing emergency response systems by creating a locally integrated network of rapid responders. Leveraging accessible technology, CERN facilitates immediate assistance during crises, ensuring swift and accurate responses to individuals in distress within local communities.
 
 
 ## Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+**Frontend:**
+- React.js, TypeScript, Tailwind CSS, Redux
+
+**Backend:**
+- Node.js, Express.js, GraphQL
+
+**Monitoring:**
+- AWS CloudWatch, Grafana, PM2
+
+**Data and Storage:**
+- AWS RDS (PostgreSQL), AWS S3, Local/Session Storage
+
+**Infrastructure:**
+- Route 53, Cloudflare, Nginx, EC2 Instances, AWS CloudFront CDN
+
+**API Services:**
+- Google Maps API/SDK, Messaging APIs (Fast2SMS, Ultramsg, Twilio), Browser APIs
 
 ## Getting Started
 
