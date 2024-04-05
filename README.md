@@ -11,14 +11,9 @@
     Your one-click companion during emergencies
     <br/>
     <br/>
-    <a href="https://github.com/hackfest-dev/HF24-Anuraksha"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/hackfest-dev/HF24-Anuraksha/tree/docs/docs"><strong>Explore the docs »</strong></a>
     <br/>
-    <br/>
-    <a href="https://github.com/hackfest-dev/HF24-Anuraksha">View Demo</a>
-    .
-    <a href="https://github.com/hackfest-dev/HF24-Anuraksha">Report Bug</a>
-    .
-    <a href="https://github.com/hackfest-dev/HF24-Anuraksha">Request Feature</a>
+    
   </p>
 </p>
 
