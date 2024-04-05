@@ -23,9 +23,6 @@
 
 * [About the Project](#about-the-project)
 * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
 * [Usage](#usage)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
@@ -62,46 +59,18 @@ Community Emergency Response Network (CERN) is a technology-driven initiative ai
 **API Services:**
 - Google Maps API/SDK, Messaging APIs (Fast2SMS, Ultramsg, Twilio), Browser APIs
 
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-
-* npm
-
-```sh
-npm install npm@latest -g
-```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-
-2. Clone the repo
-
-```sh
-git clone https://github.com/your_username_/Project-Name.git
-```
-
-3. Install NPM packages
-
-```sh
-npm install
-```
-
-4. Enter your API in `config.js`
-
-```JS
-const API_KEY = 'ENTER YOUR API';
-```
-
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+- Ensuring In-Home Safety for the Elderly 
+- Rapid Response for Road Accident Victims 
+- Enhancing Women's Safety and Security 
+- Employees working remotely or in potentially risky situations 
+- Streamlining Data Collection for future reference (Eg. Insurance) 
+- Generating Heatmaps for Proactive Safety Planning
+- Collaborate with businesses, NGOs, and local authorities operating in these sectors. 
+- In-Platform Promotions and Awareness Campaigns 
+- Use acquired data for further analysis and improvements
+
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
