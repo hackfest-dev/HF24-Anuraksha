@@ -5,7 +5,6 @@ import { MdOutlineRailwayAlert } from "react-icons/md";
 import { FaChildren } from "react-icons/fa6";
 import { GrUserFemale } from "react-icons/gr";
 import Navbar from "../components/Navbar";
-import axios from "axios";
 import { CapacitorHttp } from '@capacitor/core';
 
 const Home = () => {
