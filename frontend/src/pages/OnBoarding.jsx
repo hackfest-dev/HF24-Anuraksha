@@ -31,101 +31,107 @@ const Register = () => {
                         <form onSubmit={handleSubmit}>
                             <div className=' flex  flex-col gap-y-8 text-lg p-4 sm:p-4 rounded-xl'>
                                 <div className='h-[50vh] overflow-auto'>
-                                    <div className='flex flex-col text-start'>
-                                        <label
-                                            htmlFor='text'
-                                            className=''
-                                        >
-                                            Name
-                                        </label>
-                                        <input
-                                            type='text'
-                                            id='name1'
-                                            name='name1'
-                                            className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
-                                            placeholder='Enter name'
-                                            onChange={handleChange}
-                                        />
+                                    <div className='pb-8'>
+                                        <div className='flex flex-col text-start'>
+                                            <label
+                                                htmlFor='text'
+                                                className=''
+                                            >
+                                                Name
+                                            </label>
+                                            <input
+                                                type='text'
+                                                id='name1'
+                                                name='name1'
+                                                className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
+                                                placeholder='Enter name'
+                                                onChange={handleChange}
+                                            />
+                                        </div>
+                                        <div className='flex flex-col text-start'>
+                                            <label
+                                                htmlFor='text'
+                                                className=''
+                                            >
+                                                Contact Number
+                                            </label>
+                                            <input
+                                                type='number'
+                                                id='contact1'
+                                                name='contact1'
+                                                className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
+                                                placeholder='Enter Contact Number'
+                                                onChange={handleChange}
+                                            />
+                                        </div>
                                     </div>
-                                    <div className='flex flex-col text-start'>
-                                        <label
-                                            htmlFor='text'
-                                            className=''
-                                        >
-                                            Contact Number
-                                        </label>
-                                        <input
-                                            type='number'
-                                            id='contact1'
-                                            name='contact1'
-                                            className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
-                                            placeholder='Enter Contact Number'
-                                            onChange={handleChange}
-                                        />
+                                    <div className='pb-8'>
+                                        <div className='flex flex-col text-start'>
+                                            <label
+                                                htmlFor='text'
+                                                className=''
+                                            >
+                                                Name
+                                            </label>
+                                            <input
+                                                type='text'
+                                                id='name2'
+                                                name='name2'
+                                                className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
+                                                placeholder='Enter name'
+                                                onChange={handleChange}
+                                            />
+                                        </div>
+                                        <div className='flex flex-col text-start'>
+                                            <label
+                                                htmlFor='text'
+                                                className=''
+                                            >
+                                                Contact Number
+                                            </label>
+                                            <input
+                                                type='number'
+                                                id='contact2'
+                                                name='contact2'
+                                                className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
+                                                placeholder='Enter Contact Number'
+                                                onChange={handleChange}
+                                            />
+                                        </div>
                                     </div>
-                                    <div className='flex flex-col text-start'>
-                                        <label
-                                            htmlFor='text'
-                                            className=''
-                                        >
-                                            Name
-                                        </label>
-                                        <input
-                                            type='text'
-                                            id='name2'
-                                            name='name2'
-                                            className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
-                                            placeholder='Enter name'
-                                            onChange={handleChange}
-                                        />
-                                    </div>
-                                    <div className='flex flex-col text-start'>
-                                        <label
-                                            htmlFor='text'
-                                            className=''
-                                        >
-                                            Contact Number
-                                        </label>
-                                        <input
-                                            type='number'
-                                            id='contact2'
-                                            name='contact2'
-                                            className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
-                                            placeholder='Enter Contact Number'
-                                            onChange={handleChange}
-                                        />
-                                    </div>
-                                    <div className='flex flex-col text-start'>
-                                        <label
-                                            htmlFor='text'
-                                            className=''
-                                        >
-                                            Name
-                                        </label>
-                                        <input
-                                            type='text'
-                                            id='name3'
-                                            name='name3'
-                                            className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
-                                            placeholder='Enter name'
-                                            onChange={handleChange}
-                                        />
-                                    </div>
-                                    <div className='flex flex-col text-start'>
-                                        <label
-                                            htmlFor='text'
-                                            className=''
-                                        >
-                                            Contact Number
-                                        </label>
-                                        <input
-                                            type='number'
-                                            id='contact3'
-                                            name='contact3'
-                                            className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
-                                            placeholder='Enter Contact Number'
-                                            onChange={handleChange}
-                                        />
+                                    <div className='pb-8'>
+                                        <div className='flex flex-col text-start'>
+                                            <label
+                                                htmlFor='text'
+                                                className=''
+                                            >
+                                                Name
+                                            </label>
+                                            <input
+                                                type='text'
+                                                id='name3'
+                                                name='name3'
+                                                className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
+                                                placeholder='Enter name'
+                                                onChange={handleChange}
+                                            />
+                                        </div>
+                                        <div className='flex flex-col text-start'>
+                                            <label
+                                                htmlFor='text'
+                                                className=''
+                                            >
+                                                Contact Number
+                                            </label>
+                                            <input
+                                                type='number'
+                                                id='contact3'
+                                                name='contact3'
+                                                className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
+                                                placeholder='Enter Contact Number'
+                                                onChange={handleChange}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
 

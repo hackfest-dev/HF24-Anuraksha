@@ -24,7 +24,7 @@ const Volunteer = () => {
                     <p className=''>verified ✅</p>
                 </div>
                 <div className=' flex p-4 justify-between'>
-                    <p className=' text-lg font-semibold'>Switch to Volunteer Profile</p>
+                    <p className=' text-lg font-semibold'>Available for Volunteering?</p>
                     <div className=''>
                         <label class='relative inline-flex items-center cursor-pointer'>
                             <input
