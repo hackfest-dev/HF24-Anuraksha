@@ -77,14 +77,12 @@ exports.handleRegister = async (req, res) => {
         language,
       ]
     );
-    console.log(user);
     return res.status(200).json({
       status: 200,
       message: 'User created',
       user_id: user.rows[0].user_id,
     });
   } catch (err) {
-    console.log(err);
     return res.status(500).json({
       status: 500,
       message: 'Internal server error',
@@ -104,7 +102,7 @@ exports.handleOnboarding = async (req, res) => {
         .status(401)
         .json({ status: 401, message: 'User is not registered' });
     }
-    
+
     for (const contact of contactDetails) {
       await pool.query(
         'INSERT INTO emergencycontacts (user_id, name, phone) VALUES ($1, $2, $3)',
@@ -116,7 +114,31 @@ exports.handleOnboarding = async (req, res) => {
       .status(200)
       .json({ status: 200, message: 'User Onboarding Successful' });
   } catch (err) {
-    console.log(err);
+    return res.status(500).json({
+      status: 500,
+      message: 'Internal server error',
+      description: err,
+    });
+  }
+};
+
+exports.handleToggleVolunteerStatus = async (req, res) => {
+  try {
+    const { user_id, volunteer_status } = req.body;
+    const user = await pool.query('SELECT * FROM users WHERE user_id = $1', [
+      user_id,
+    ]);
+    if (user.rows.length === 0) {
+      return res.status(401).json({ status: 401, message: 'User not found' });
+    }
+    const response = await pool.query(
+      'UPDATE users SET is_volunteer = $1 * WHERE user_id = $2',
+      [volunteer_status, user_id]
+    );
+    return res
+      .status(200)
+      .json({ status: 200, message: 'Volunteer Status Updated' });
+  } catch (err) {
     return res.status(500).json({
       status: 500,
       message: 'Internal server error',

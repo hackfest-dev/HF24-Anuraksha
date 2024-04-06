@@ -14,17 +14,13 @@ router.get('/', async (req, res) => {
 router.post('/login', UserController.handleLogin);
 router.post('/register', UserController.handleRegister);
 
-router.post(
-  '/onboarding',
-  verifyTokenMiddleware,
-  UserController.handleOnboarding
-);
+router.post('/onboarding', UserController.handleOnboarding);
 
-// router.post(
-//   '/toggleVolunteerStatus',
-//   verifyTokenMiddleware,
-//   UserController.handleToggleVolunteerStatus
-// );
+router.post(
+  '/toggleVolunteerStatus',
+  verifyTokenMiddleware,
+  UserController.handleToggleVolunteerStatus
+);
 
 router.post(
   'triggersos',

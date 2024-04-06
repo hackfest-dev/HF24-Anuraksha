@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 
 const verifyTokenMiddleware = async (req, res, next) => {
   try {
-    const authorizationToken = req.cookies['next-auth.session-token'];
+    const authorizationToken = req.headers.authorization;
     if (!authorizationToken) {
       return res.status(401).json({ status: 401, message: 'Unauthorized' });
     }
