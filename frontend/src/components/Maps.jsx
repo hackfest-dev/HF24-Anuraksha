@@ -7,8 +7,8 @@ const API_KEY = "AIzaSyA3yNeTNL2GooUf0GKMkioJmG7QYa1HKDE";
 const libraries = ["places"];
 
 const mapContainerStyle = {
-    width: "400px", // Adjust as needed
-    height: "400px", // Adjust as needed
+    width: "100%", // Adjust as needed
+    height: "100%", // Adjust as needed
 };
 
 const Maps = () => {
