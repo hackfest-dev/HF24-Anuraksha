@@ -54,37 +54,37 @@ const Home = () => {
                 <div className='h-1/3 w-full px-2 py-2 z-30 bg-background-color'>
                     <div className='h-full  w-full grid grid-cols-3 gap-x-1 sm:gap-x-2 justify-center items-center'>
                         <div className='flex flex-col sm:px-8'>
-                            <div className=' border border-primary flex items-center justify-center py-1 sm:py-2 rounded-lg text-5xl sm:text-6xl'>
+                            <div className=' border border-primary flex items-center justify-center py-1 sm:py-2 rounded-lg text-5xl sm:text-6xl cursor-pointer active:scale-90 duration-150'>
                                 <GiPoliceOfficerHead />
                             </div>
                             <p className='text-center text-sm'>Police</p>
                         </div>
                         <div className='flex flex-col sm:px-8'>
-                            <div className=' border border-primary flex items-center justify-center py-1 sm:py-2 rounded-lg text-5xl sm:text-6xl'>
+                            <div className=' border border-primary flex items-center justify-center py-1 sm:py-2 rounded-lg text-5xl sm:text-6xl cursor-pointer active:scale-90 duration-150'>
                                 <GiSmallFire />
                             </div>
                             <p className='text-center text-sm'>Fire Brigade</p>
                         </div>
                         <div className='flex flex-col sm:px-8'>
-                            <div className=' border border-primary flex items-center justify-center py-1 sm:py-2 rounded-lg text-5xl sm:text-6xl'>
+                            <div className=' border border-primary flex items-center justify-center py-1 sm:py-2 rounded-lg text-5xl sm:text-6xl cursor-pointer active:scale-90 duration-150'>
                                 <GiAmbulance />
                             </div>
                             <p className='text-center text-sm'>Ambulance</p>
                         </div>
                         <div className='flex flex-col sm:px-8'>
-                            <div className=' border border-primary flex items-center justify-center py-1 sm:py-2 rounded-lg text-5xl sm:text-6xl'>
+                            <div className=' border border-primary flex items-center justify-center py-1 sm:py-2 rounded-lg text-5xl sm:text-6xl cursor-pointer active:scale-90 duration-150'>
                                 <MdOutlineRailwayAlert />
                             </div>
                             <p className='text-center text-sm'>Railway related Issue</p>
                         </div>
                         <div className='flex flex-col sm:px-8'>
-                            <div className=' border border-primary flex items-center justify-center py-1 sm:py-2 rounded-lg text-5xl sm:text-6xl'>
+                            <div className=' border border-primary flex items-center justify-center py-1 sm:py-2 rounded-lg text-5xl sm:text-6xl cursor-pointer active:scale-90 duration-150'>
                                 <FaChildren />
                             </div>
                             <p className='text-center text-sm'>Child related Issues</p>
                         </div>
                         <div className='flex flex-col sm:px-8'>
-                            <div className=' border border-primary flex items-center justify-center py-1 sm:py-2 rounded-lg text-5xl sm:text-6xl'>
+                            <div className=' border border-primary flex items-center justify-center py-1 sm:py-2 rounded-lg text-5xl sm:text-6xl cursor-pointer active:scale-90 duration-150'>
                                 <GrUserFemale />
                             </div>
                             <p className='text-center text-sm'>Women security issue</p>
