@@ -83,10 +83,13 @@ exports.handleRegister = async (req, res) => {
 exports.handleOnboarding = async (req, res) => {
   try {
     const { user_id, contactDetails } = req.body;
-    const user = await pool.query(
-      'INSERT INTO users (name, phone, dob, gender, state, current_location, is_volunteer) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *',
-      [name, phone, dob, gender, state, current_location, is_volunteer]
-    );
+    // Insert each contact detail into emergencyContacts table
+    for (const contact of contactDetails) {
+      await pool.query(
+        'INSERT INTO emergencycontacts (user_id, name, phone) VALUES ($1, $2, $3)',
+        [user_id, contact.name, contact.phone]
+      );
+    }
 
     return res
       .status(200)
