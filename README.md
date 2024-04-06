@@ -1,11 +1,11 @@
-# HF24-Anuraksha
+
 <br/>
 <p align="center">
   <a href="https://github.com/hackfest-dev/HF24-Anuraksha">
     <img src="logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Anuraksha</h3>
+  <h1 align="center">Anuraksha</h1>
 
   <p align="center">
     Your one-click companion during emergencies
@@ -17,7 +17,7 @@
   </p>
 </p>
 
-![Downloads]( https://img.shields.io/badge/any_text-you_like-blue) ![Contributors](https://img.shields.io/badge/contributors-3-darkgreen) ![Issues](https://img.shields.io/github/issues/ShaanCoding/ReadME-Generator) ![License](https://img.shields.io/github/license/ShaanCoding/ReadME-Generator) 
+![Downloads]( https://img.shields.io/badge/any_text-you_like-blue) ![Contributors](https://img.shields.io/badge/contributors-3-darkgreen) ![Issues](https://img.shields.io/badge/issues-xyz-yellow) ![License](https://img.shields.io/badge/licence-xyz-orange) 
 
 ## Table Of Contents
 
@@ -33,7 +33,7 @@
 
 
 
-Community Emergency Response Network (CERN) is a technology-driven initiative aimed at addressing the shortcomings of existing emergency response systems by creating a locally integrated network of rapid responders. Leveraging accessible technology, CERN facilitates immediate assistance during crises, ensuring swift and accurate responses to individuals in distress within local communities.
+Anuraksha is a technology-driven initiative aimed at addressing the shortcomings of existing emergency response systems by creating a locally integrated network of rapid responders. Leveraging accessible technology, CERN facilitates immediate assistance during crises, ensuring swift and accurate responses to individuals in distress within local communities.
 
 
 ## Built With
