@@ -15,7 +15,11 @@ import { MdOutlineSettings } from "react-icons/md";
 import { MdOutlineLogout } from "react-icons/md";
 import { ImInfo } from "react-icons/im";
 
+import { useTranslation } from "react-i18next";
+import LanguageDropdown from "./Language Dropdown";
+
 export default function Sidebar({ showMenu, setShowMenu }) {
+    const { t } = useTranslation();
     const ToggleClose = () => {
         setShowMenu(!showMenu);
     };
@@ -26,7 +30,7 @@ export default function Sidebar({ showMenu, setShowMenu }) {
                 className=' absolute z-40 w-screen h-screen bg-black/25 '
                 onClick={() => setShowMenu(false)}
             ></div>
-            <Card className='absolute h-[calc(100vh)] bg-background-color w-full max-w-[65%] p-4 z-50 shadow-xl shadow-blue-gray-900/7'>
+            <Card className='absolute h-[calc(100vh)] bg-background-color w-full max-w-[70%] p-4 z-50 shadow-xl shadow-blue-gray-900/7'>
                 <div className='flex justify-between'>
                     <div
                         className=' pt-2'
@@ -67,23 +71,38 @@ export default function Sidebar({ showMenu, setShowMenu }) {
                     </div>
                 </div>
                 <List>
-                    <ListItem>
+                    <ListItem
+                        onClick={() => {
+                            navigate("/");
+                            setShowMenu(false);
+                        }}
+                    >
                         <ListItemPrefix></ListItemPrefix>
                         <FaHome className='text-primary mr-1' />
                         Home
                     </ListItem>
-                    <ListItem onClick={() => navigate("/volunteer")}>
+                    <ListItem
+                        onClick={() => {
+                            navigate("/volunteer");
+                            setShowMenu(false);
+                        }}
+                    >
                         <ListItemPrefix></ListItemPrefix>
                         <IoMdPerson className='text-primary mr-1' />
                         Volunteer
                     </ListItem>
-                    <ListItem onClick={() => navigate("/inbox")}>
+                    <ListItem
+                        onClick={() => {
+                            navigate("/inbox");
+                            setShowMenu(false);
+                        }}
+                    >
                         <ListItemPrefix></ListItemPrefix>
                         <MdOutlineMessage className='text-primary mr-1' />
                         Inbox
                         <ListItemSuffix>
                             <Chip
-                                value='14'
+                                value='5'
                                 size='sm'
                                 variant='ghost'
                                 className='rounded-full text-red-900'
@@ -91,17 +110,32 @@ export default function Sidebar({ showMenu, setShowMenu }) {
                         </ListItemSuffix>
                     </ListItem>
 
-                    <ListItem onClick={() => navigate("/settings")}>
+                    <ListItem
+                        onClick={() => {
+                            navigate("/settings");
+                            setShowMenu(false);
+                        }}
+                    >
                         <ListItemPrefix></ListItemPrefix>
                         <MdOutlineSettings className='text-primary mr-1' />
                         Settings
                     </ListItem>
-                    <ListItem onClick={() => navigate("/about")}>
+                    <ListItem
+                        onClick={() => {
+                            navigate("/about");
+                            setShowMenu(false);
+                        }}
+                    >
                         <ListItemPrefix></ListItemPrefix>
                         <ImInfo className='text-primary mr-1' />
                         About
                     </ListItem>
-                    <ListItem onClick={() => navigate("/login")}>
+                    <ListItem
+                        onClick={() => {
+                            navigate("/login");
+                            setShowMenu(false);
+                        }}
+                    >
                         <ListItemPrefix></ListItemPrefix>
                         <MdOutlineLogout className=' font-extrabold text-primary mr-1' />
                         Log Out

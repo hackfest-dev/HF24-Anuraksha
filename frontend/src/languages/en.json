@@ -1,0 +1,34 @@
+{
+    "home": {
+        "anuraksha": "Anuraksha",
+        "map": "Map",
+        "satellite": "Satellite",
+        "police": "Police",
+        "fire brigade": "Fire Brigade",
+        "ambulance": "Ambulance",
+        "railway related issues": "Railway related Issues",
+        "child related issues": "Child related Issues",
+        "women security issues": "Women security Issues"
+    },
+    "sidebar": {
+        "user": "User",
+        "volunteer": "Volunteer",
+        "inbox": "Inbox",
+        "settings": "Settings",
+        "about": "About",
+        "log out": "Log Out"
+    },
+    "volunteer": {
+        "anuraksha": "Anuraksha",
+        "volunteer profile": "Volunteer Profile",
+        "personal information": "Personal Information",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "kyc status": "KYC Status",
+        "verified": "verified",
+        "available for volunteering": "Available for Volunteering",
+        "no": "No",
+        "yes": "Yes"
+    }
+}

@@ -43,7 +43,7 @@ const Register = () => {
                                         name='number'
                                         className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
                                         placeholder={localStorage.getItem("phoneNumber")}
-                                        disabled='true'
+                                        disabled={true}
                                     />
                                 </div>
 
@@ -95,6 +95,17 @@ const Register = () => {
                                         <option value='male'>Male</option>
                                         <option value='female'>Female</option>
                                     </select>
+                                </div>
+                                <div className='flex justify-between'>
+                                    <p>Sign-up as Volunteer?</p>
+                                    <label className='relative inline-flex items-center cursor-pointer text-sm'>
+                                        <input
+                                            className='sr-only peer'
+                                            value=''
+                                            type='checkbox'
+                                        />
+                                        <div className="peer rounded-full outline-none duration-100 after:duration-500 w-20 h-8 bg-blue-300 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-500  after:content-['No'] after:absolute after:outline-none after:rounded-full after:h-6 after:w-6 after:bg-white after:top-1 after:left-1 after:flex after:justify-center after:items-center  after:text-sky-800 after:font-bold peer-checked:after:translate-x-12 peer-checked:after:content-['Yes'] peer-checked:after:border-white"></div>
+                                    </label>
                                 </div>
 
                                 <button

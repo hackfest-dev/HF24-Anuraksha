@@ -8,6 +8,7 @@ import OnBoarding from "./pages/OnBoarding";
 import Inbox from "./pages/Inbox";
 import About from "./pages/About";
 import Settings from "./pages/Settings";
+import Volunteer from "./pages/Volunteer";
 
 const App = () => {
     return (
@@ -40,6 +41,10 @@ const App = () => {
                 <Route
                     path='/settings'
                     element={<Settings />}
+                />
+                <Route
+                    path='/volunteer'
+                    element={<Volunteer />}
                 />
             </Routes>
         </BrowserRouter>
