@@ -38,9 +38,6 @@ dependencies:
   dotenv:
     specifier: ^16.4.5
     version: 16.4.5
-  onesignal-cordova-plugin:
-    specifier: ^5.1.0
-    version: 5.1.0
   prop-types:
     specifier: ^15.8.1
     version: 15.8.1
@@ -3198,11 +3195,6 @@ packages:
     dependencies:
       wrappy: 1.0.2
     dev: true
-
-  /onesignal-cordova-plugin@5.1.0:
-    resolution: {integrity: sha512-72xyeX773aoHIWMipapqvDF5UR7+zKyto85bPJWEhcbzLORoA7SFptxDJkStAomzfEGRFXYaco9HEbHAXnJULQ==}
-    engines: {'0': {name: cordova-android, version: '>=4.0.0'}, '1': {name: apple-xcode, version: '>=8.0.0'}, '2': {name: apple-ios, version: '>=7.0.0'}, '3': {name: cordova, version: '>=6.4.0'}, '4': {name: cordova-ios, version: '>=4.3.0'}}
-    dev: false
 
   /open@8.4.2:
     resolution: {integrity: sha512-7x81NCL719oNbsq/3mh+hVrAWmFuEYUqrq/Iw3kUzH8ReypT9QQ0BLoJS7/G9k6N81XjW4qHWtjWwe/9eLy1EQ==}
