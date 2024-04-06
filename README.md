@@ -1,36 +1,17 @@
-
-<br/>
-<p align="center">
+<div align="center">
   <a href="https://github.com/hackfest-dev/HF24-Anuraksha">
     <img src="https://anuraksha-bucket.s3.ap-south-1.amazonaws.com/assets/Anuraksha+Banner.png" alt="Logo">
   </a>
+  
+![Contributors](https://img.shields.io/badge/contributors-3-darkgreen)
+[![Anuraksha](https://img.shields.io/static/v1?label=Hackfest2024&message=Anuraksha&color=blue&logo=github)](https://github.com/hackfest-dev/HF24-Anuraksha)
+![Maintained - yes](https://img.shields.io/badge/Maintained-yes-green)
 
-  <h1 align="center">Anuraksha</h1>
 
-  <p align="center">
-    Your one-click companion during emergencies
-    <br/>
-    <br/>
-    <a href="https://github.com/hackfest-dev/HF24-Anuraksha/tree/docs/docs"><strong>Explore the docs »</strong></a>
-    <br/>
-    
-  </p>
-</p>
 
-![Downloads]( https://img.shields.io/badge/any_text-you_like-blue) ![Contributors](https://img.shields.io/badge/contributors-3-darkgreen) ![Issues](https://img.shields.io/github/issues/hackfest-dev/HF24-Anuraksha) ![License](https://img.shields.io/badge/licence-xyz-orange) 
-
-## Team name
-
-Team Anuraksha
-
-## College Name
-
-PES University Electronic City Campus, Bengaluru
-
-## Track
-
-Open Innovation
-
+# Team Anuraksha
+## PES University Electronic City Campus, Bengaluru
+</div>
 
 ## Table Of Contents
 
@@ -38,12 +19,11 @@ Open Innovation
 * [Objective](#objective)
 * [Features](#features)
 * [Built With](#built-with)
-* [Usecase](#usecase)
+* [Use cases](#usecases)
 * [Contributors](#contributors)
 
 
 ## About The Project
-
 
 Anuraksha is a technology-driven initiative aimed at addressing the shortcomings of existing emergency response systems by creating a locally integrated network of rapid responders. Leveraging accessible technology, CERN facilitates immediate assistance during crises, ensuring swift and accurate responses to individuals in distress within local communities.
 
@@ -85,7 +65,7 @@ Anuraksha is a technology-driven initiative aimed at addressing the shortcomings
 **API Services:**
 - Google Maps API/SDK, Messaging APIs (Fast2SMS, Ultramsg, Twilio), Browser APIs
 
-## Usecase
+## Use cases
 
 - Ensuring In-Home Safety for the Elderly 
 - Rapid Response for Road Accident Victims 
@@ -97,17 +77,10 @@ Anuraksha is a technology-driven initiative aimed at addressing the shortcomings
 - In-Platform Promotions and Awareness Campaigns 
 - Use acquired data for further analysis and improvements
 
-
-
 ## Contributors
-
-[Satyam Kumar](https://github.com/satyamksharma)<br/> 
-ksatyam433@gmail.com
-
-[Sarthak S Kumar](https://github.com/SarthakSKumar)<br/>  sarthakskumar7@gmail.com
-
-[Kashish K C](https://github.com/KCKashish)<br/> 
-kashishsheregar@gmail.com
+[Sarthak S Kumar](https://github.com/SarthakSKumar) <a href="mailto:sarthakskumar7@gmail.com">(sarthakskumar7@gmail.com)</a><br>
+[Satyam Kumar](https://github.com/satyamksharma)   <a href="mailto:ksatyam433@gmail.com">(ksatyam433@gmail.com)</a><br>
+[Kashish K C](https://github.com/KCKashish) <a href="mailto:kashishsheregar@gmail.com">(kashishsheregar@gmail.com)</a><br>
 
 
 
