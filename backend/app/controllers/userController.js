@@ -19,14 +19,11 @@ exports.handleLogin = async (req, res) => {
         .status(401)
         .json({ status: 401, message: 'User is not registered' });
     }
-
     const token = jwt.sign(
       {
-        user_id: user.user_id,
-        name: user.username,
-        phone: user.phone,
-        state: user.state,
-        is_volunteer: user.is_volunteer,
+        user_id: user.rows[0].user_id,
+        name: user.rows[0].username,
+        phone: user.rows[0].phone,
       },
       JWT_SECRET,
       { expiresIn: '1h' }
@@ -37,17 +34,16 @@ exports.handleLogin = async (req, res) => {
       message: 'Login successful',
       data: {
         user: {
-          user_id: user.user_id,
-          name: user.username,
-          phone: user.phone,
-          state: user.state,
-          is_volunteer: user.is_volunteer,
+          user_id: user.rows[0].user_id,
+          name: user.rows[0].name,
+          state: user.rows[0].state,
+          is_volunteer: user.rows[0].is_volunteer,
+          language: user.rows[0].language,
         },
         token,
       },
     });
   } catch (err) {
-    console.log(err);
     return res.status(500).json({
       status: 500,
       message: 'Internal server error',
@@ -58,11 +54,28 @@ exports.handleLogin = async (req, res) => {
 
 exports.handleRegister = async (req, res) => {
   try {
-    const { name, phone, dob, gender, state, current_location, is_volunteer } =
-      req.body;
+    const {
+      name,
+      phone,
+      dob,
+      gender,
+      state,
+      current_location,
+      is_volunteer,
+      language,
+    } = req.body;
     const user = await pool.query(
-      'INSERT INTO users (name, phone, dob, gender, state, current_location, is_volunteer) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *',
-      [name, phone, dob, gender, state, current_location, is_volunteer]
+      'INSERT INTO users (name, phone, dob, gender, state, current_location, is_volunteer, language) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *',
+      [
+        name,
+        phone,
+        dob,
+        gender,
+        state,
+        current_location,
+        is_volunteer,
+        language,
+      ]
     );
     console.log(user);
     return res.status(200).json({
@@ -83,7 +96,15 @@ exports.handleRegister = async (req, res) => {
 exports.handleOnboarding = async (req, res) => {
   try {
     const { user_id, contactDetails } = req.body;
-    // Insert each contact detail into emergencyContacts table
+    const user = await pool.query('SELECT * FROM users WHERE user_id = $1', [
+      user_id,
+    ]);
+    if (user.rows.length === 0) {
+      return res
+        .status(401)
+        .json({ status: 401, message: 'User is not registered' });
+    }
+    
     for (const contact of contactDetails) {
       await pool.query(
         'INSERT INTO emergencycontacts (user_id, name, phone) VALUES ($1, $2, $3)',

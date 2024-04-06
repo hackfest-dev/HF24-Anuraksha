@@ -1,6 +1,7 @@
 const express = require('express');
 
 const UserController = require('./controllers/userController');
+const SOSController = require('./controllers/SOSController');
 
 const verifyTokenMiddleware = require('./middleware/verifyToken');
 
@@ -12,6 +13,23 @@ router.get('/', async (req, res) => {
 
 router.post('/login', UserController.handleLogin);
 router.post('/register', UserController.handleRegister);
-router.post('/onboarding', UserController.handleOnboarding);
+
+router.post(
+  '/onboarding',
+  verifyTokenMiddleware,
+  UserController.handleOnboarding
+);
+
+// router.post(
+//   '/toggleVolunteerStatus',
+//   verifyTokenMiddleware,
+//   UserController.handleToggleVolunteerStatus
+// );
+
+router.post(
+  'triggersos',
+  verifyTokenMiddleware,
+  SOSController.handleSOSTrigger
+);
 
 module.exports = router;
