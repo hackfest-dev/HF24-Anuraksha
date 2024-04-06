@@ -12,20 +12,17 @@ const Home = () => {
     const longitude = "74.934208";
     const user_id = 10;
     const handleSos = () => {
-        axios
-            .post(
-                "https://0e1b-115-243-167-82.ngrok-free.app/triggerSOS",
-                {
-                    latitude,
-                    longitude,
-                    user_id,
-                },
-                {
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                }
-            )
+        fetch("https://0e1b-115-243-167-82.ngrok-free.app/triggerSOS", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                latitude,
+                longitude,
+                user_id,
+            }),
+        })
             .then((response) => {
                 // Handle success
                 console.log(response.data);
@@ -34,6 +31,24 @@ const Home = () => {
                 // Handle error
                 console.log(error);
             });
+
+        //             longitude,
+        //             user_id,
+        //         },
+        //         {
+        //             headers: {
+        //                 "Content-Type": "application/json",
+        //             },
+        //         }
+        //     )
+        //     .then((response) => {
+        //         // Handle success
+        //         console.log(response.data);
+        //     })
+        //     .catch((error) => {
+        //         // Handle error
+        //         console.log(error);
+        //     });
     };
     return (
         <section className=''>
