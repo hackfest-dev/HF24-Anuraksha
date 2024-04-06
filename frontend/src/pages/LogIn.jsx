@@ -2,12 +2,16 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 const LogIn = () => {
     const [phoneNumber, setPhoneNumber] = useState("");
+    const [otp, setOtp] = useState(""); // State for OTP [default: ""
     const [showErrorMessage, setShowErrorMessage] = useState(false); // State for error message
     const [otpForm, showOtpForm] = useState(false); // State for OTP form [default: false
     const navigate = useNavigate();
 
-    const handleChange = (event) => {
+    const NumberhandleChange = (event) => {
         setPhoneNumber(event.target.value);
+    };
+    const OtphandleChange = (event) => {
+        setOtp(event.target.value.slice(0, 6)); // Update OTP state and limit to max 6 digits
     };
     const isValidNumber = phoneNumber.length === 10 && /^\d+$/.test(phoneNumber);
 
@@ -20,7 +24,7 @@ const LogIn = () => {
             // Proceed with OTP logic
             showOtpForm(true);
 
-            console.log("Valid phone number:", phoneNumber);
+            localStorage.setItem("phoneNumber", phoneNumber);
         }
     };
     const handleOtpSubmit = (event) => {
@@ -34,7 +38,11 @@ const LogIn = () => {
                 <div className='  '>
                     {/* logo */}
                     <div className='flex mx-auto pt-10 pb-20 justify-center'>
-                        <h1 className=' text-4xl'>Anuraksha</h1>
+                        <img
+                            src='https://anuraksha-bucket.s3.ap-south-1.amazonaws.com/assets/logo-english.png'
+                            alt='logo-main'
+                            className='h-14'
+                        />
                     </div>
                     {/* form */}
                     <div className=' flex flex-col gap-y-4 p-1'>
@@ -55,7 +63,8 @@ const LogIn = () => {
                                         className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
                                         placeholder='Enter your 10 digit Number'
                                         value={phoneNumber}
-                                        onChange={handleChange}
+                                        onChange={NumberhandleChange}
+                                        style={{ appearance: "textfield" }}
                                     />
                                     {showErrorMessage && (
                                         <p className='text-red-500'>
@@ -73,10 +82,12 @@ const LogIn = () => {
                                         </label>
                                         <input
                                             type='number'
-                                            id='otp'
-                                            name='otp'
-                                            className=' rounded-lg p-2 my-1'
-                                            placeholder='Enter OTP'
+                                            id='number'
+                                            name='number'
+                                            className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
+                                            placeholder='Enter your 6 digit Otp'
+                                            value={otp}
+                                            onChange={OtphandleChange}
                                         />
                                     </div>
                                 )}

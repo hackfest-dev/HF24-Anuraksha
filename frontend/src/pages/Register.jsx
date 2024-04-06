@@ -19,13 +19,34 @@ const Register = () => {
                 <div className='  '>
                     {/* logo */}
                     <div className='flex mx-auto pt-10 pb-20 justify-center'>
-                        <h1 className=' text-4xl'>Anuraksha</h1>
+                        <img
+                            src='https://anuraksha-bucket.s3.ap-south-1.amazonaws.com/assets/logo-english.png'
+                            alt='logo-main'
+                            className='h-14'
+                        />
                     </div>
                     {/* form */}
                     <div className=' flex flex-col gap-y-4 p-1'>
                         <h2 className=' text-2xl font-bold text-center'>Register</h2>
                         <form onSubmit={handleSubmit}>
                             <div className=' flex  flex-col gap-y-8 text-lg p-4 sm:p-4 rounded-xl '>
+                                <div className='flex flex-col text-start'>
+                                    <label
+                                        htmlFor='text'
+                                        className=''
+                                    >
+                                        Phone Number
+                                    </label>
+                                    <input
+                                        type='number'
+                                        id='number'
+                                        name='number'
+                                        className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
+                                        placeholder={localStorage.getItem("phoneNumber")}
+                                        disabled='true'
+                                    />
+                                </div>
+
                                 <div className='flex flex-col text-start'>
                                     <label
                                         htmlFor='text'
