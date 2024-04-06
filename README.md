@@ -101,12 +101,13 @@ Anuraksha is a technology-driven initiative aimed at addressing the shortcomings
 
 ## Contributors
 
-[Satyam Kumar](https://github.com/satyamksharma) 
+[Satyam Kumar](https://github.com/satyamksharma)<br/> 
+ksatyam433@gmail.com
 
-[Sarthak S Kumar](https://github.com/SarthakSKumar) 
+[Sarthak S Kumar](https://github.com/SarthakSKumar)<br/>  sarthakskumar7@gmail.com
 
-[Kashish K C](https://github.com/KCKashish)
-
+[Kashish K C](https://github.com/KCKashish)<br/> 
+kashishsheregar@gmail.com
 
 
 
