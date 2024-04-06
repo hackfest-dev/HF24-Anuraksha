@@ -33,10 +33,10 @@
     },
     "about":{
         "anuraksha": "Anuraksha",
-        "about": "About"
+        "about": "About",
+        "anuraksha is an emergancy sos application designed to provide swift assistance during critical situations. with the simple activation of the sos command, our app instantly notifies your pre-saved emergency contacts and nearby volunteers, enabling them to promptly reach out and offer assistance": "Anuraksha is an emergancy SOS application designed to provide swift assistance during critical situations. With the simple activation of the SOS command, our app instantly notifies your pre-saved emergency contacts and nearby volunteers, enabling them to promptly reach out and offer assistance",
+        "our mission at anuraksha, our mission is to ensure the safety and well-being of individuals in times of crisis. we understand that emergencies can occur unexpectedly, and our app is designed to provide a reliable solution for seeking help when it matters most": "Our Mission At Anuraksha, our mission is to ensure the safety and well-being of individuals in times of crisis. We understand that emergencies can occur unexpectedly, and our app is designed to provide a reliable solution for seeking help when it matters most"
         
-        
-
         
     },
     "signin":{
@@ -44,11 +44,13 @@
         "signin": "SignIn",
         "mobile number": "Mobile Number",
         "enter your 10 digit number": "Enter your 10 digit Number",
-        "get otp": "Get OTP"
-    },
-    "opt":{
+        "get otp": "Get OTP",
+        "otp": "OTP",
+        "enter your 6 digit otp": "Enter your 6 digit Otp",
+        "verify otp": "Verify OTP"
 
     },
+    
     "register":{
         "anuraksha":"Anuraksha",
         "register": "Register",
@@ -75,5 +77,12 @@
         "enter contact number": "Enter Contact Number",
         "add contacts": "Add Contacts"
         
+    },
+    "settings":{
+        "anuraksha": "Anuraksha",
+        "settings": "Settings",
+        "general settings": "General Settings",
+        "restrict background data": "Restrict Background Data",
+        "notifications": "Notifications"
     }
 }
