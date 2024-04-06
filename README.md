@@ -17,12 +17,26 @@
   </p>
 </p>
 
-![Downloads]( https://img.shields.io/badge/any_text-you_like-blue) ![Contributors](https://img.shields.io/badge/contributors-3-darkgreen) ![Issues](https://img.shields.io/badge/issues-xyz-yellow) ![License](https://img.shields.io/badge/licence-xyz-orange) 
+![Downloads]( https://img.shields.io/badge/any_text-you_like-blue) ![Contributors](https://img.shields.io/badge/contributors-3-darkgreen) ![Issues](https://img.shields.io/github/issues/hackfest-dev/HF24-Anuraksha) ![License](https://img.shields.io/badge/licence-xyz-orange) 
+
+## Team name
+
+Team Anuraksha
+
+## College Name
+
+PES University Electronic City Campus, Bengaluru
+
+## Track
+
+Open Innovation
+
 
 ## Table Of Contents
 
 * [About the Project](#about-the-project)
 * [Objective](#objective)
+* [Features](#features)
 * [Built With](#built-with)
 * [Usecase](#usecase)
 * [Contributors](#contributors)
@@ -45,6 +59,14 @@ Anuraksha is a technology-driven initiative aimed at addressing the shortcomings
 - Incorporating data storage for future analysis and generating heatmaps of high-risk areas, we seek to enhance long-term prevention efforts and contribute to community-wide safety improvements. 
 
 - Keeping contacts informed, rallying nearby helpers swiftly, and promoting targeted interventions for better emergency management.
+
+## Features
+
+- SOS Alerting with Location Tracking
+- Rapid Volunteer Response Network
+- Rapid Volunteer Response Network
+- Data Storage such as time, location, etc for future reference and analysis.
+- Generating Heatmaps for more fatal areas for the authorities to work upon.
 
 ## Built With
 
