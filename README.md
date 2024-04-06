@@ -22,8 +22,9 @@
 ## Table Of Contents
 
 * [About the Project](#about-the-project)
+* [Objective](#objective)
 * [Built With](#built-with)
-* [Usage](#usage)
+* [Usecase](#usecase)
 * [Contributors](#contributors)
 
 
@@ -35,6 +36,15 @@
 
 Anuraksha is a technology-driven initiative aimed at addressing the shortcomings of existing emergency response systems by creating a locally integrated network of rapid responders. Leveraging accessible technology, CERN facilitates immediate assistance during crises, ensuring swift and accurate responses to individuals in distress within local communities.
 
+## Objective
+
+- To develop a robust local responders network leveraging accessible technology, addressing the deficiencies in existing emergency support systems. 
+
+- Providing features such as SOS alerting with location tracking, a rapid volunteer response network, and direct connection to emergency contacts, our solution aims to ensure swift help during emergencies.
+ 
+- Incorporating data storage for future analysis and generating heatmaps of high-risk areas, we seek to enhance long-term prevention efforts and contribute to community-wide safety improvements. 
+
+- Keeping contacts informed, rallying nearby helpers swiftly, and promoting targeted interventions for better emergency management.
 
 ## Built With
 
@@ -56,7 +66,7 @@ Anuraksha is a technology-driven initiative aimed at addressing the shortcomings
 **API Services:**
 - Google Maps API/SDK, Messaging APIs (Fast2SMS, Ultramsg, Twilio), Browser APIs
 
-## Usage
+## Usecase
 
 - Ensuring In-Home Safety for the Elderly 
 - Rapid Response for Road Accident Victims 
