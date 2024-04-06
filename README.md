@@ -38,10 +38,11 @@ Anuraksha is a technology-driven initiative aimed at addressing the shortcomings
 - Keeping contacts informed, rallying nearby helpers swiftly, and promoting targeted interventions for better emergency management.
 ## Features
 
-- SOS Alerting with Location Tracking
 - Rapid Volunteer Response Network
-- Data Storage such as time, location, etc for future reference and analysis.
-- Generating Heatmaps for more fatal areas for the authorities to work upon.
+- Send instant SOS alerts to saved emergency contacts
+- Gathering data on time and location for future analysis
+- SOS Alerting with Location Tracking
+- Generate heatmaps to target high-risk areas
 
 ## Built With
 
