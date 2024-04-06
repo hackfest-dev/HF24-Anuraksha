@@ -19,7 +19,7 @@ const App = () => {
                     element={<LogIn />}
                 />
                 <Route
-                    path='/:uId/register'
+                    path='/register'
                     element={<Register />}
                 />
                 <Route

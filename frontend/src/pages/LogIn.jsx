@@ -25,7 +25,7 @@ const LogIn = () => {
     };
     const handleOtpSubmit = (event) => {
         event.preventDefault();
-        navigate("/u1/register");
+        navigate("/register");
     };
 
     return (
