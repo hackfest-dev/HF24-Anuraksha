@@ -1,1 +1,86 @@
-{}
+
+{
+    "home": {
+        "anuraksha": "ಅನುರಕ್ಷಾ",
+        "map": "ನಕ್ಷೆ",
+        "satellite": "ಉಪಗ್ರಹ",
+        "police": "ಪೊಲೀಸ್",
+        "fire brigade": "ಅಗ್ನಿಶಮನ ದಳ",
+        "ambulance": "ಅಂಬುಲೆನ್ಸ್",
+        "railway related issues": "ರೈಲು ಸಂಬಂಧಿತ ಸಮಸ್ಯೆಗಳು",
+        "child related issues": "ಮಕ್ಕಳ ಸಂಬಂಧಿತ ಸಮಸ್ಯೆಗಳು",
+        "women security issues": "ಮಹಿಳೆಯರ ಸುರಕ್ಷತೆ ಸಮಸ್ಯೆಗಳು"
+    },
+    "sidebar": {
+        "user": "ಬಳಕೆದಾರ",
+        "volunteer": "ಸ್ವಯಂಸೇವಕ",
+        "inbox": "ಇನ್‌ಬಾಕ್ಸ್",
+        "settings": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+        "about": "ಬಗ್ಗೆ",
+        "log out": "ಲಾಗ್ ಔಟ್"
+    },
+    "volunteer": {
+        "anuraksha": "ಅನುರಕ್ಷಾ",
+        "volunteer profile": "ಸ್ವಯಂಸೇವಕ ಪ್ರೊಫೈಲ್",
+        "personal information": "ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ",
+        "name": "ಹೆಸರು",
+        "email": "ಇಮೇಲ್",
+        "phone": "ಫೋನ್",
+        "kyc status": "ಕೈವಿಚಾರಿಕ ಸ್ಥಿತಿ",
+        "verified": "ಪರಿಶೀಲಿಸಲಾಗಿದೆ",
+        "available for volunteering": "ಸ್ವಯಂಸೇವೆಗಾಗಿ ಲಭ್ಯವಿದೆ",
+        "no": "ಇಲ್ಲ",
+        "yes": "ಹೌದು"
+    },
+    "about":{
+        "anuraksha": "ಅನುರಕ್ಷಾ",
+        "about": "ಬಗ್ಗೆ",
+        "anuraksha is an emergancy sos application designed to provide swift assistance during critical situations. with the simple activation of the sos command, our app instantly notifies your pre-saved emergency contacts and nearby volunteers, enabling them to promptly reach out and offer assistance": "ಅನುರಕ್ಷಾ ಅತ್ಯಗತ್ಯ ಸಂದರ್ಭಗಳಲ್ಲಿ ತುರಂತ ಸಹಾಯ ಒದಗಿಸಲು ಡಿಜಿನ್ ಮಾಡಲಾಗಿದೆ. ಎಸೊಎಸ್ ಆದೇಶವನ್ನು ಸರಳವಾಗಿ ಸಕ್ರಿಯಗೊಳಿಸಿದರೆ, ನಮ್ಮ ಅಪ್ಲಿಕೇಶನ್ ತಕ್ಷಣವೇ ನಿಮ್ಮ ಮುನ್ನಡೆದ ಆಪಾತಕಾಲೀನ ಸಂಪರ್ಕಗಳನ್ನು ಮತ್ತು ಹತ್ತಿರದ ಸ್ವಯಂಸೇವಕರನ್ನು ಪ್ರದರ್ಶಿಸುತ್ತದೆ, ಅವರು ತ್ವರಿತವಾಗಿ ಸಂಪರ್ಕಿಸಿ ಸಹಾಯ ಒದಗಿಸಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ",
+        "our mission at anuraksha, our mission is to ensure the safety and well-being of individuals in times of crisis. we understand that emergencies can occur unexpectedly, and our app is designed to provide a reliable solution for seeking help when it matters most": "ನಮ್ಮ ಮಿಷನ್ ಅನುರಕ್ಷಾದಲ್ಲಿ, ಸಂಕಟಕಾಲದಲ್ಲಿ ವ್ಯಕ್ತಿಗಳ ಸುರಕ್ಷತೆ ಮತ್ತು ಹೊಸಹೆಚ್ಚು ವರಿಯ ನೆನಪಿನಲ್ಲಿಡಲು ನಮ್ಮ ಮಿಷನ್ ಇದೆ. ಆಪತ್ಕಾಲ ಅಪ್ರತಿದೃಷ್ಟವಾಗಿ ನಡೆಯಬಹುದು ಎಂಬುದನ್ನು ನಾವು ಗೊತ್ತಿದ್ದೇವೆ, ಮತ್ತು ನಮ್ಮ ಅಪ್ಲಿಕೇಶನ್ ಮುಖ್ಯವಾಗಿ ಸಹಾಯ ಬೇಕಾದ ಸಮಯದಲ್ಲಿ ನಿರ್ಭರವಾದ ಪರಿಹಾರವನ್ನು ಒದಗಿಸಲು ಡಿಜಿನ್ ಮಾಡಲಾಗಿದೆ"
+    },
+    "signin":{
+        "anuraksha": "ಅನುರಕ್ಷಾ",
+        "signin": "ಸೈನ್ ಇನ್ ಮಾಡಿ",
+        "mobile number": "ಮೊಬೈಲ್ ಸಂಖ್ಯೆ",
+        "enter your 10 digit number": "ನಿಮ್ಮ 10 ಅಂಕಿ ಸಂಖ್ಯೆಯನ್ನು ನಮೊದಿಸಿ",
+        "get otp": "ಒಟಿಪಿ ಪಡೆಯಿರಿ",
+        "otp": "ಒಟಿಪಿ",
+        "enter your 6 digit otp": "ನಿಮ್ಮ 6 ಅಂಕಿ ಒಟಿಪಿಯನ್ನು ನಮೊದಿಸಿ",
+        "verify otp": "ಒಟಿಪಿ ಪರಿಶೀಲಿಸಿ"
+    },
+    
+    "register":{
+        "anuraksha":"ಅನುರಕ್ಷಾ",
+        "register": "ನೆನಪಿನಲ್ಲಿಡು",
+        "phone number": "ಫೋನ್ ಸಂಖ್ಯೆ",
+        "name": "ಹೆಸರು",
+        "enter your name": "ನಿಮ್ಮ ಹೆಸರನ್ನು ನಮೊದಿಸಿ",
+        "date of birth": "ಹುಟ್ಟಿದ ದಿನಾಂಕ",
+        "gender": "ಲಿಂಗ",
+        "please select": "ದಯವಿಟ್ಟು ಆಯ್ಕೆಮಾಡಿ",
+        "male": "ಗಂಡು",
+        "female": "ಹೆಣ್ಣು",
+        "sign-up as volunteer": "ಸ್ವಯಂಸೇವಕನಾಗಿ ನೆರವೇರಿಸಿ",
+        "no": "ಇಲ್ಲ",
+        "yes": "ಹೌದು",
+        "next": "ಮುಂದುವರಿಸಿ"
+    },
+    "add emergency contact":{
+        "anuraksha": "ಅನುರಕ್ಷಾ",
+        "add emergency contact": "ಅತ್ಯಾವಶ್ಯಕ ಸಂಪರ್ಕ ಸೇರಿಸಿ",
+        "add up to 3 emergency contacts who will be notified in case of an emergency": "ಅತ್ಯಾವಶ್ಯಕ ಸಂದರ್ಭದಲ್ಲಿ ಸೂಚಿತಗೊಳಿಸಲಾಗುವ 3 ಅತ್ಯಾವಶ್ಯಕ ಸಂಪರ್ಕಗಳನ್ನು ಸೇರಿಸಿ",
+        "name": "ಹೆಸರು",
+        "enter name": "ಹೆಸರು ನಮೊದಿಸಿ",
+        "contact number": "ಸಂಪರ್ಕ ಸಂಖ್ಯೆ",
+        "enter contact number": "ಸಂಪರ್ಕ ಸಂಖ್ಯೆ ನಮೊದಿಸಿ",
+        "add contacts": "ಸಂಪರ್ಕಗಳನ್ನು ಸೇರಿಸಿ"
+        
+    },
+    "settings":{
+        "anuraksha": "ಅನುರಕ್ಷಾ",
+        "settings": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+        "general settings": "ಸಾಮಾನ್ಯ ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+        "restrict background data": "ಹಿನ್ನೆಲೆ ಡೇಟಾವನ್ನು ನಿಯಂತ್ರಿಸಿ",
+        "notifications": "ಅಧಿಸೂಚನೆಗಳು"
+    }
+}

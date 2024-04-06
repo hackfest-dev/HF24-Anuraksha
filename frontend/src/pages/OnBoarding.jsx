@@ -139,7 +139,7 @@ const Register = () => {
                                     type='submit'
                                     className=' bg-secondary disabled:bg-gray-300 active:bg-primary p-2 rounded-full'
                                 >
-                                    Update
+                                    Add Contacts
                                 </button>
                             </div>
                         </form>

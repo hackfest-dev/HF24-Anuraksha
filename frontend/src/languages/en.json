@@ -30,5 +30,59 @@
         "available for volunteering": "Available for Volunteering",
         "no": "No",
         "yes": "Yes"
+    },
+    "about":{
+        "anuraksha": "Anuraksha",
+        "about": "About",
+        "anuraksha is an emergancy sos application designed to provide swift assistance during critical situations. with the simple activation of the sos command, our app instantly notifies your pre-saved emergency contacts and nearby volunteers, enabling them to promptly reach out and offer assistance": "Anuraksha is an emergancy SOS application designed to provide swift assistance during critical situations. With the simple activation of the SOS command, our app instantly notifies your pre-saved emergency contacts and nearby volunteers, enabling them to promptly reach out and offer assistance",
+        "our mission at anuraksha, our mission is to ensure the safety and well-being of individuals in times of crisis. we understand that emergencies can occur unexpectedly, and our app is designed to provide a reliable solution for seeking help when it matters most": "Our Mission At Anuraksha, our mission is to ensure the safety and well-being of individuals in times of crisis. We understand that emergencies can occur unexpectedly, and our app is designed to provide a reliable solution for seeking help when it matters most"
+        
+        
+    },
+    "signin":{
+        "anuraksha": "Anuraksha",
+        "signin": "SignIn",
+        "mobile number": "Mobile Number",
+        "enter your 10 digit number": "Enter your 10 digit Number",
+        "get otp": "Get OTP",
+        "otp": "OTP",
+        "enter your 6 digit otp": "Enter your 6 digit Otp",
+        "verify otp": "Verify OTP"
+
+    },
+    
+    "register":{
+        "anuraksha":"Anuraksha",
+        "register": "Register",
+        "phone number": "Phone Number",
+        "name": "Name",
+        "enter your name": "Enter your Name",
+        "date of birth": "Date of Birth",
+        "gender": "Gender",
+        "please select": "Please select",
+        "male": "Male",
+        "female": "Female",
+        "sign-up as volunteer": "Sign-up as Volunteer",
+        "no": "No",
+        "yes": "Yes",
+        "next": "Next"
+    },
+    "add emergency contact":{
+        "anuraksha": "Anuraksha",
+        "add emergency contact": "Add Emergency Contact",
+        "add up to 3 emergency contacts who will be notified in case of an emergency": "Add up to 3 emergency contacts who will be notified in case of an emergency",
+        "name": "Name",
+        "enter name": "Enter name",
+        "contact number": "Contact Number",
+        "enter contact number": "Enter Contact Number",
+        "add contacts": "Add Contacts"
+        
+    },
+    "settings":{
+        "anuraksha": "Anuraksha",
+        "settings": "Settings",
+        "general settings": "General Settings",
+        "restrict background data": "Restrict Background Data",
+        "notifications": "Notifications"
     }
 }
