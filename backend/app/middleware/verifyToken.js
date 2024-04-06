@@ -12,12 +12,12 @@ const verifyTokenMiddleware = async (req, res, next) => {
       process.env.JWT_SECRET,
       async (err, decoded) => {
         if (err) {
-          res.status(401).json({ status: 401, message: 'Unauthorized' });
+          return res.status(401).json({ status: 401, message: 'Unauthorized' });
         }
         req.user = decoded;
+        next();
       }
     );
-    next();
   } catch (err) {
     return res.status(500).json({
       status: 500,
