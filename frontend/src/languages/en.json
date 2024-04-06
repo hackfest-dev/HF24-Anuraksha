@@ -30,5 +30,50 @@
         "available for volunteering": "Available for Volunteering",
         "no": "No",
         "yes": "Yes"
+    },
+    "about":{
+        "anuraksha": "Anuraksha",
+        "about": "About"
+        
+        
+
+        
+    },
+    "signin":{
+        "anuraksha": "Anuraksha",
+        "signin": "SignIn",
+        "mobile number": "Mobile Number",
+        "enter your 10 digit number": "Enter your 10 digit Number",
+        "get otp": "Get OTP"
+    },
+    "opt":{
+
+    },
+    "register":{
+        "anuraksha":"Anuraksha",
+        "register": "Register",
+        "phone number": "Phone Number",
+        "name": "Name",
+        "enter your name": "Enter your Name",
+        "date of birth": "Date of Birth",
+        "gender": "Gender",
+        "please select": "Please select",
+        "male": "Male",
+        "female": "Female",
+        "sign-up as volunteer": "Sign-up as Volunteer",
+        "no": "No",
+        "yes": "Yes",
+        "next": "Next"
+    },
+    "add emergency contact":{
+        "anuraksha": "Anuraksha",
+        "add emergency contact": "Add Emergency Contact",
+        "add up to 3 emergency contacts who will be notified in case of an emergency": "Add up to 3 emergency contacts who will be notified in case of an emergency",
+        "name": "Name",
+        "enter name": "Enter name",
+        "contact number": "Contact Number",
+        "enter contact number": "Enter Contact Number",
+        "add contacts": "Add Contacts"
+        
     }
 }
