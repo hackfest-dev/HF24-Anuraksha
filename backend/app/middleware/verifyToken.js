@@ -2,9 +2,9 @@ const jwt = require('jsonwebtoken');
 
 const verifyTokenMiddleware = async (req, res, next) => {
   try {
-    const authorizationToken = req.cookies['next-auth.session-token'];
+    const authorizationToken = req.headers.authorization;
     if (!authorizationToken) {
-      return res.status(Errors.UNAUTHORIZED.status).json(Errors.UNAUTHORIZED);
+      return res.status(401).json({ status: 401, message: 'Unauthorized' });
     }
 
     jwt.verify(
@@ -12,17 +12,18 @@ const verifyTokenMiddleware = async (req, res, next) => {
       process.env.JWT_SECRET,
       async (err, decoded) => {
         if (err) {
-          return res
-            .status(Errors.UNAUTHORIZED.status)
-            .json(Errors.UNAUTHORIZED);
+          res.status(401).json({ status: 401, message: 'Unauthorized' });
         }
-
-        req.user = decoded.user;
+        req.user = decoded;
       }
     );
     next();
-  } catch (error) {
-    return res.status(Errors.SERVER_ERROR.status).json(Errors.SERVER_ERROR);
+  } catch (err) {
+    return res.status(500).json({
+      status: 500,
+      message: 'Internal server error',
+      description: err,
+    });
   }
 };
 
