@@ -15,7 +15,11 @@ import { MdOutlineSettings } from "react-icons/md";
 import { MdOutlineLogout } from "react-icons/md";
 import { ImInfo } from "react-icons/im";
 
+import { useTranslation } from "react-i18next";
+import LanguageDropdown from "./Language Dropdown";
+
 export default function Sidebar({ showMenu, setShowMenu }) {
+    const { t } = useTranslation();
     const ToggleClose = () => {
         setShowMenu(!showMenu);
     };
