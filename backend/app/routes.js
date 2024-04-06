@@ -26,10 +26,11 @@ router.post(
 router.post(
   '/triggerSOS',
   verifyTokenMiddleware,
-  SOSController.handleSOSTrigger
+  SOSController.handleSOSTrigger //Yet to complete
 );
 
 router.get('/profile', verifyTokenMiddleware, UserController.handleGetProfile);
+
 router.get(
   '/SOSHistory',
   verifyTokenMiddleware,

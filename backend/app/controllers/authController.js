@@ -22,7 +22,7 @@ exports.handleLogin = async (req, res) => {
     const token = jwt.sign(
       {
         user_id: user.rows[0].user_id,
-        name: user.rows[0].username,
+        name: user.rows[0].name,
         phone: user.rows[0].phone,
       },
       JWT_SECRET,

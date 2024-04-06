@@ -2,7 +2,8 @@ const { pool } = require('../config/db.config');
 
 exports.handleToggleVolunteerStatus = async (req, res) => {
   try {
-    const { user_id, volunteer_status } = req.body;
+    const { volunteer_status } = req.body;
+    const { user_id } = req.user;
     const user = await pool.query('SELECT * FROM users WHERE user_id = $1', [
       user_id,
     ]);
@@ -10,7 +11,7 @@ exports.handleToggleVolunteerStatus = async (req, res) => {
       return res.status(401).json({ status: 401, message: 'User not found' });
     }
     const response = await pool.query(
-      'UPDATE users SET is_volunteer = $1 * WHERE user_id = $2',
+      'UPDATE users SET is_volunteer = $1 WHERE user_id = $2',
       [volunteer_status, user_id]
     );
     return res

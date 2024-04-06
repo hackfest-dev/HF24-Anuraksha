@@ -14,7 +14,7 @@ const verifyTokenMiddleware = async (req, res, next) => {
         if (err) {
           res.status(401).json({ status: 401, message: 'Unauthorized' });
         }
-        req.user = decoded.user;
+        req.user = decoded;
       }
     );
     next();
