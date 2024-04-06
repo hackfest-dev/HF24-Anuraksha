@@ -6,7 +6,7 @@
 ![Contributors](https://img.shields.io/badge/contributors-3-darkgreen)
 [![Anuraksha](https://img.shields.io/static/v1?label=Hackfest2024&message=Anuraksha&color=blue&logo=github)](https://github.com/hackfest-dev/HF24-Anuraksha)
 ![Maintained - yes](https://img.shields.io/badge/Maintained-yes-green)
-[![issues - HF24-Anuraksha](https://img.shields.io/github/issues/HF24-Anuraksha)]()
+[![issues - HF24-Anuraksha](https://img.shields.io/github/issues/HF24-Anuraksha)](https://github.com/hackfest-dev/HF24-Anuraksha/issues)
 
 
 # Team Anuraksha
