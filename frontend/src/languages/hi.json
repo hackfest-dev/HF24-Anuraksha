@@ -1,1 +1,90 @@
 {}
+
+{
+    "home": {
+        "anuraksha": "अनुरक्षा",
+        "map": "नक्शा",
+        "satellite": "उपग्रह",
+        "police": "पुलिस",
+        "fire brigade": "अग्निशमन दल",
+        "ambulance": "रुग्णवाहिका",
+        "railway related issues": "रेल संबंधित मुद्दे",
+        "child related issues": "बच्चे संबंधित मुद्दे",
+        "women security issues": "महिला सुरक्षा समस्याएँ"
+    },
+    "sidebar": {
+        "user": "उपयोगकर्ता",
+        "volunteer": "स्वयंसेवक",
+        "inbox": "इनबॉक्स",
+        "settings": "सेटिंग्स",
+        "about": "बारे में",
+        "log out": "लॉग आउट"
+    },
+    "volunteer": {
+        "anuraksha": "अनुरक्षा",
+        "volunteer profile": "स्वयंसेवक प्रोफ़ाइल",
+        "personal information": "व्यक्तिगत जानकारी",
+        "name": "नाम",
+        "email": "ईमेल",
+        "phone": "फ़ोन",
+        "kyc status": "केवाईसी स्थिति",
+        "verified": "सत्यापित",
+        "available for volunteering": "स्वयंसेवा के लिए उपलब्ध",
+        "no": "नहीं",
+        "yes": "हां"
+    },
+    "about":{
+        "anuraksha": "अनुरक्षा",
+        "about": "के बारे में",
+        "anuraksha is an emergancy sos application designed to provide swift assistance during critical situations. with the simple activation of the sos command, our app instantly notifies your pre-saved emergency contacts and nearby volunteers, enabling them to promptly reach out and offer assistance": "अनुरक्षा एक आपातकालीन एसओएस एप्लिकेशन है जो महत्वपूर्ण स्थितियों में त्वरित सहायता प्रदान करने के लिए डिज़ाइन किया गया है। एसओएस कमांड को सक्रिय करने के बस्ते में, हमारा ऐप तुरंत आपको पूर्व-सहेजे आपातकालीन संपर्कों और आस-पास के स्वयंसेवकों को सूचित करता है, जो उन्हें त्वरित रूप से संपर्क करने और सहायता प्रदान करने की सुविधा प्रदान करता है।",
+        "our mission at anuraksha, our mission is to ensure the safety and well-being of individuals in times of crisis. we understand that emergencies can occur unexpectedly, and our app is designed to provide a reliable solution for seeking help when it matters most": "हमारा मिशन अनुरक्षा में, हमारा मिशन संकट के समय में व्यक्तियों की सुरक्षा और कल्याण सुनिश्चित करना है। हमें यह समझना है कि आपातकाल अप्रत्याशित रूप से हो सकते हैं, और हमारा ऐप जब सबसे अधिक मायने रखता है, तो मदद की तलाश के लिए एक विश्वसनीय समाधान प्रदान करने के लिए डिज़ाइन किया गया है।"
+    },
+    "signin":{
+        "anuraksha": "अनुरक्षा",
+        "signin": "साइन इन करें",
+        "mobile number": "मोबाइल नंबर",
+        "enter your 10 digit number": "अपना 10 अंकों का नंबर दर्ज करें",
+        "get otp": "ओटीपी प्राप्त करें",
+        "otp": "ओटीपी",
+        "enter your 6 digit otp": "अपना 6 अंकों का ओटीपी दर्ज करें",
+        "verify otp": "ओटीपी सत्यापित करें"
+    },
+    
+    "register":{
+        "anuraksha":"अनुरक्षा",
+        "register": "रजिस्टर",
+        "phone number": "फ़ोन नंबर",
+        "name": "नाम",
+        "enter your name": "
+
+अपना नाम दर्ज करें",
+        "date of birth": "जन्म तिथि",
+        "gender": "लिंग",
+        "please select": "कृपया चुनें",
+        "male": "पुरुष",
+        "female": "महिला",
+        "sign-up as volunteer": "स्वयंसेवक के रूप में साइन अप करें",
+        "no": "नहीं",
+        "yes": "हां",
+        "next": "अगला"
+    },
+    "add emergency contact":{
+        "anuraksha": "अनुरक्षा",
+        "add emergency contact": "आपातकालीन संपर्क जोड़ें",
+        "add up to 3 emergency contacts who will be notified in case of an emergency": "3 आपातकालीन संपर्क जोड़ें जिन्हें आपातकाल में सूचित किया जाएगा",
+        "name": "नाम",
+        "enter name": "नाम दर्ज करें",
+        "contact number": "संपर्क संख्या",
+        "enter contact number": "संपर्क संख्या दर्ज करें",
+        "add contacts": "संपर्क जोड़ें"
+        
+    },
+    "settings":{
+        "anuraksha": "अनुरक्षा",
+        "settings": "सेटिंग्स",
+        "general settings": "सामान्य सेटिंग्स",
+        "restrict background data": "पृष्ठभूमि डेटा प्रतिबंधित करें",
+        "notifications": "सूचनाएँ"
+    }
+}
+```
