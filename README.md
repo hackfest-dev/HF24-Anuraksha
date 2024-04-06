@@ -29,18 +29,16 @@ Anuraksha is a technology-driven initiative aimed at addressing the shortcomings
 
 ## Objective
 
-- To develop a robust local responders network leveraging accessible technology, addressing the deficiencies in existing emergency support systems. 
+- Strengthening local emergency response with accessible technology to address existing system deficiencies. 
 
-- Providing features such as SOS alerting with location tracking, a rapid volunteer response network, and direct connection to emergency contacts, our solution aims to ensure swift help during emergencies.
+- Utilizing accumulated data, we aim to analyze high-risk areas through heatmaps, bolstering long-term prevention efforts for community safety
  
-- Incorporating data storage for future analysis and generating heatmaps of high-risk areas, we seek to enhance long-term prevention efforts and contribute to community-wide safety improvements. 
+- Achieve a user-friendly experience and provide comprehensive multilingual support 
 
 - Keeping contacts informed, rallying nearby helpers swiftly, and promoting targeted interventions for better emergency management.
-
 ## Features
 
 - SOS Alerting with Location Tracking
-- Rapid Volunteer Response Network
 - Rapid Volunteer Response Network
 - Data Storage such as time, location, etc for future reference and analysis.
 - Generating Heatmaps for more fatal areas for the authorities to work upon.
