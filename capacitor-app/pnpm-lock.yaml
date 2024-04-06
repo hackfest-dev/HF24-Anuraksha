@@ -14,6 +14,9 @@ dependencies:
   '@capacitor/geolocation':
     specifier: ^5.0.7
     version: 5.0.7(@capacitor/core@5.7.4)
+  '@capacitor/local-notifications':
+    specifier: ^5.0.7
+    version: 5.0.7(@capacitor/core@5.7.4)
   '@capacitor/push-notifications':
     specifier: ^5.1.1
     version: 5.1.1(@capacitor/core@5.7.4)
@@ -368,6 +371,14 @@ packages:
 
   /@capacitor/geolocation@5.0.7(@capacitor/core@5.7.4):
     resolution: {integrity: sha512-LfCA08hjWhrBnygBVg8Q3OybbTpdmkAfW6ii+V/BO/UcO72kVsjXRnLQJH6G/U/BOu5qlwzPoNLuFKReF7t/CQ==}
+    peerDependencies:
+      '@capacitor/core': ^5.0.0
+    dependencies:
+      '@capacitor/core': 5.7.4
+    dev: false
+
+  /@capacitor/local-notifications@5.0.7(@capacitor/core@5.7.4):
+    resolution: {integrity: sha512-Q16sAv9B55qrXRBgjsom3UAXQ9J5I9HxOToYtQ6jvM3237DphotvVSNriX2AGeXLi5nHkmNv2ZsFu17wTrRcpA==}
     peerDependencies:
       '@capacitor/core': ^5.0.0
     dependencies:
