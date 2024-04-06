@@ -6,31 +6,45 @@ import { FaChildren } from "react-icons/fa6";
 import { GrUserFemale } from "react-icons/gr";
 import Navbar from "../components/Navbar";
 import axios from "axios";
+import { CapacitorHttp } from '@capacitor/core';
 
 const Home = () => {
     const latitude = "13.182976";
     const longitude = "74.934208";
     const user_id = 10;
-    const handleSos = () => {
-        fetch("https://0e1b-115-243-167-82.ngrok-free.app/triggerSOS", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                latitude,
-                longitude,
-                user_id,
+    const handleSos = async () => {
+        const options = {
+            url: "https://0e1b-115-243-167-82.ngrok-free.app/triggerSOS",
+            // headers: { 'X-Fake-Header': 'Fake-Value' },
+            data: JSON.stringify({
+                latitude: latitude,
+                longitude: longitude,
+                user_id: user_id,
             }),
-        })
-            .then((response) => {
-                // Handle success
-                console.log(response.data);
-            })
-            .catch((error) => {
-                // Handle error
-                console.log(error);
-            });
+        };
+
+        const response = await CapacitorHttp.post(options);
+
+
+        // fetch("https://0e1b-115-243-167-82.ngrok-free.app/triggerSOS", {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify({
+        //         latitude,
+        //         longitude,
+        //         user_id,
+        //     }),
+        // })
+        //     .then((response) => {
+        //         // Handle success
+        //         console.log(response.data);
+        //     })
+        //     .catch((error) => {
+        //         // Handle error
+        //         console.log(error);
+        //     });
 
         //             longitude,
         //             user_id,

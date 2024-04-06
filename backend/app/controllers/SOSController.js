@@ -33,8 +33,11 @@ const qs = require('qs');
 // };
 exports.handleSOSTrigger = async (req, res) => {
   try {
-    const { latitude, longitude, user_id } = req.body;
+    // const { latitude, longitude, user_id } = req.body;
     // const { user_id } = req.user;
+    const latitude = '13.182976';
+    const longitude = '74.934208';
+    const user_id = 10;
 
     const user = await pool.query(
       'INSERT INTO sos_history (location, user_id) VALUES ($1, $2) RETURNING *',
