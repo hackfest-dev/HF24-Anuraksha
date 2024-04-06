@@ -33,8 +33,8 @@ const qs = require('qs');
 // };
 exports.handleSOSTrigger = async (req, res) => {
   try {
-    const { latitude, longitude } = req.body;
-    const { user_id } = req.user;
+    const { latitude, longitude, user_id } = req.body;
+    // const { user_id } = req.user;
 
     const user = await pool.query(
       'INSERT INTO sos_history (location, user_id) VALUES ($1, $2) RETURNING *',
@@ -48,9 +48,8 @@ exports.handleSOSTrigger = async (req, res) => {
 
     for (const contact of emergencyContacts.rows) {
       const { name, phone } = contact;
-      const message = `This is a distress message. Location: ${latitude}, ${longitude}`;
 
-      await sendDistressMessage(name, phone, message);
+      await sendDistressMessage(name, phone, latitude, longitude);
     }
 
     return res.status(200).json({
@@ -67,24 +66,50 @@ exports.handleSOSTrigger = async (req, res) => {
   }
 };
 
-async function sendDistressMessage(name, phone, message) {
+async function sendDistressMessage(name, phone, latitude, longitude) {
   try {
+    const dat = qs.stringify({
+      token: 's7qeg6kfqt99ztw4',
+      to: phone,
+      body:
+        '*Anuraksha App*\n' +
+        'Hi ' +
+        name +
+        ", I'm in an emergency. Please help me! I'm at NRAM Polytechnic, Kalya, Karnataka, 574110. Latitude: " +
+        latitude +
+        ', Longitude: ' +
+        longitude +
+        '.',
+    });
+
+    const confi = {
+      method: 'post',
+      url: 'https://api.ultramsg.com/instance83042/messages/chat',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      data: dat,
+    };
+    const res = await axios(confi);
+
     const data = qs.stringify({
       token: 's7qeg6kfqt99ztw4',
       to: phone,
-      body: message,
+      address: 'NRAM Polytechnic, Kalya, Karnataka, 574110',
+      lat: latitude,
+      lng: longitude,
     });
 
     const config = {
       method: 'post',
-      url: 'https://api.ultramsg.com/instance83042/messages/chat',
+      url: 'https://api.ultramsg.com/instance83042/messages/location',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
       data: data,
     };
     const response = await axios(config);
-    console.log(`Distress message sent to ${name} (${phone}): ${message}`);
+    console.log(`Distress message sent to ${name} (${phone})`);
     return response.data;
   } catch (error) {
     console.error(

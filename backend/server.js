@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const cron = require('node-cron');
-const routes = require('./routes');
+const routes = require('./app/routes');
 require('dotenv').config();
 
 const app = express();

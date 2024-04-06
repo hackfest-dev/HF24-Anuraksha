@@ -25,7 +25,6 @@ router.post(
 
 router.post(
   '/triggerSOS',
-  verifyTokenMiddleware,
   SOSController.handleSOSTrigger //Yet to complete
 );
 
