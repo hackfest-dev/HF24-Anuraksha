@@ -55,6 +55,40 @@ const LogIn = () => {
     };
     const handleOtpSubmit = async (event) => {
         event.preventDefault(); // Prevent default form submission
+        const formattedPhoneNumber = "+91" + phoneNumber;
+
+        try {
+            const response = await fetch(
+                "https://verify.twilio.com/v2/Services/VA1faf08387222a9faafa4ab851f7e7352/VerificationCheck",
+                {
+                    method: "POST",
+                    body: new URLSearchParams({
+                        To: formattedPhoneNumber,
+                        Code: otp,
+                    }),
+                    headers: {
+                        Authorization:
+                            "Basic " +
+                            btoa(
+                                "AC39a709bca877af451d9767d92dc08de9:6333ad2d635cb392ef334956745c6b87"
+                            ),
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                }
+            );
+
+            if (response.ok) {
+                console.log("Verification successful!");
+                navigate("/register");
+                localStorage.setItem("phoneNumber", phoneNumber);
+                // Handle successful verification
+            } else {
+                console.error("Verification failed:", response.status);
+                // Handle failed verification
+            }
+        } catch (error) {
+            console.error("Error:", error);
+        }
     };
 
     return (
