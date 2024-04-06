@@ -44,9 +44,6 @@ Open Innovation
 
 ## About The Project
 
-![Screen Shot](images/screenshot.png)
-
-
 
 Anuraksha is a technology-driven initiative aimed at addressing the shortcomings of existing emergency response systems by creating a locally integrated network of rapid responders. Leveraging accessible technology, CERN facilitates immediate assistance during crises, ensuring swift and accurate responses to individuals in distress within local communities.
 
