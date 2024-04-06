@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import {
     Card,
     Typography,
@@ -7,18 +8,25 @@ import {
     ListItemSuffix,
     Chip,
 } from "@material-tailwind/react";
+import { FaHome } from "react-icons/fa";
+import { IoMdPerson } from "react-icons/io";
+import { MdOutlineMessage } from "react-icons/md";
+import { MdOutlineSettings } from "react-icons/md";
+import { MdOutlineLogout } from "react-icons/md";
+import { ImInfo } from "react-icons/im";
 
 export default function Sidebar({ showMenu, setShowMenu }) {
     const ToggleClose = () => {
         setShowMenu(!showMenu);
     };
+    const navigate = useNavigate();
     return (
         <>
             <div
                 className=' absolute z-40 w-screen h-screen bg-black/25 '
                 onClick={() => setShowMenu(false)}
             ></div>
-            <Card className='absolute h-[calc(100vh)] bg-background-color w-full max-w-[60%] p-4 z-50 shadow-xl shadow-blue-gray-900/7'>
+            <Card className='absolute h-[calc(100vh)] bg-background-color w-full max-w-[65%] p-4 z-50 shadow-xl shadow-blue-gray-900/7'>
                 <div className='flex justify-between'>
                     <div
                         className=' pt-2'
@@ -61,29 +69,17 @@ export default function Sidebar({ showMenu, setShowMenu }) {
                 <List>
                     <ListItem>
                         <ListItemPrefix></ListItemPrefix>
-                        Dashboard
+                        <FaHome className='text-primary mr-1' />
+                        Home
                     </ListItem>
-                    <ListItem>
-                        <ListItemPrefix>
-                            <svg
-                                xmlns='http://www.w3.org/2000/svg'
-                                fill='red'
-                                viewBox='0 0 24 24'
-                                stroke-width='1.5'
-                                stroke='currentColor'
-                                class='w-6 h-6'
-                            >
-                                <path
-                                    stroke-linecap='round'
-                                    stroke-linejoin='round'
-                                    d='M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z'
-                                />
-                            </svg>
-                        </ListItemPrefix>
+                    <ListItem onClick={() => navigate("/volunteer")}>
+                        <ListItemPrefix></ListItemPrefix>
+                        <IoMdPerson className='text-primary mr-1' />
                         Volunteer
                     </ListItem>
-                    <ListItem>
+                    <ListItem onClick={() => navigate("/inbox")}>
                         <ListItemPrefix></ListItemPrefix>
+                        <MdOutlineMessage className='text-primary mr-1' />
                         Inbox
                         <ListItemSuffix>
                             <Chip
@@ -95,12 +91,19 @@ export default function Sidebar({ showMenu, setShowMenu }) {
                         </ListItemSuffix>
                     </ListItem>
 
-                    <ListItem>
+                    <ListItem onClick={() => navigate("/settings")}>
                         <ListItemPrefix></ListItemPrefix>
+                        <MdOutlineSettings className='text-primary mr-1' />
                         Settings
                     </ListItem>
-                    <ListItem>
+                    <ListItem onClick={() => navigate("/about")}>
                         <ListItemPrefix></ListItemPrefix>
+                        <ImInfo className='text-primary mr-1' />
+                        About
+                    </ListItem>
+                    <ListItem onClick={() => navigate("/login")}>
+                        <ListItemPrefix></ListItemPrefix>
+                        <MdOutlineLogout className=' font-extrabold text-primary mr-1' />
                         Log Out
                     </ListItem>
                 </List>
