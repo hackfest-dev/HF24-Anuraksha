@@ -32,6 +32,7 @@ const Maps = () => {
     const { isLoaded, loadError } = useLoadScript({
         googleMapsApiKey: "AIzaSyA3yNeTNL2GooUf0GKMkioJmG7QYa1HKDE",
         libraries,
+        loadingElement: <div>Loading...</div>, // Show a loading message
     });
 
     if (loadError) return <div>Error loading maps</div>;
@@ -43,7 +44,15 @@ const Maps = () => {
             zoom={15}
             center={currentLocation || { lat: 0, lng: 0 }} // Default to a general area if location is unavailable
         >
-            {currentLocation && <Marker position={currentLocation} />}
+            {currentLocation && (
+                <Marker
+                    position={currentLocation}
+                    icon={{
+                        url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+                        scaledSize: new window.google.maps.Size(50, 50), // Adjust as needed
+                    }}
+                />
+            )}
         </GoogleMap>
     );
 };
