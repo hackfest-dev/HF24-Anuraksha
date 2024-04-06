@@ -9,11 +9,13 @@ android {
 
 apply from: "../capacitor-cordova-android-plugins/cordova.variables.gradle"
 dependencies {
-    implementation project(':capacitor-firebase-messaging')
     implementation project(':capacitor-geolocation')
-
+    implementation project(':capacitor-push-notifications')
+    implementation project(':capacitor-toast')
+    implementation "com.onesignal:OneSignal:5.1.6"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10"
 }
-
+apply from: "../../node_modules/.pnpm/onesignal-cordova-plugin@5.1.0/node_modules/onesignal-cordova-plugin/build-extras-onesignal.gradle"
 
 if (hasProperty('postBuildExtras')) {
   postBuildExtras()
