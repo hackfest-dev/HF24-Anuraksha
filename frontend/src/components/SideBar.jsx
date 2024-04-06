@@ -98,7 +98,7 @@ export default function Sidebar({ showMenu, setShowMenu }) {
                         Inbox
                         <ListItemSuffix>
                             <Chip
-                                value='14'
+                                value='5'
                                 size='sm'
                                 variant='ghost'
                                 className='rounded-full text-red-900'
