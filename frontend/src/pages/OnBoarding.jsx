@@ -38,7 +38,8 @@ const Register = () => {
                                         id='contact1'
                                         name='contact1'
                                         className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
-                                        placeholder='Enter your Name '
+                                        placeholder='Enter Contact 1 '
+                                        onChange={handleChange}
                                     />
                                 </div>
                                 <div className='flex flex-col text-start'>
@@ -53,7 +54,8 @@ const Register = () => {
                                         id='contact1'
                                         name='contact1'
                                         className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
-                                        placeholder='Enter your Name '
+                                        placeholder='Enter Contact 2 '
+                                        onChange={handleChange}
                                     />
                                 </div>
                                 <div className='flex flex-col text-start'>
@@ -68,7 +70,8 @@ const Register = () => {
                                         id='contact1'
                                         name='contact1'
                                         className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
-                                        placeholder='Enter your Name '
+                                        placeholder='Enter Contact 3 '
+                                        onChange={handleChange}
                                     />
                                 </div>
 
