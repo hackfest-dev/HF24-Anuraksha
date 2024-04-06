@@ -31,6 +31,8 @@ const Home = () => {
                     />
                 </div>
             </div>
+            {/* Overlay */}
+
             {showMenu && (
                 <SideBar
                     setShowMenu={setShowMenu}
