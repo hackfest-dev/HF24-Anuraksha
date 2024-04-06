@@ -11,6 +11,9 @@ dependencies:
   '@capacitor/core':
     specifier: ^5.7.4
     version: 5.7.4
+  '@capacitor/geolocation':
+    specifier: ^5.0.7
+    version: 5.0.7(@capacitor/core@5.7.4)
   '@googlemaps/js-api-loader':
     specifier: ^1.16.6
     version: 1.16.6
@@ -365,6 +368,14 @@ packages:
     resolution: {integrity: sha512-iZBgvx3o4amzKv5ttA+QHB6i7cxK+/mYpCQd1tnSdipg6ZkvfBhg1HkzhEqHk+I7MNur+QwgYDZho9+ycHRwOw==}
     dependencies:
       tslib: 2.6.2
+    dev: false
+
+  /@capacitor/geolocation@5.0.7(@capacitor/core@5.7.4):
+    resolution: {integrity: sha512-LfCA08hjWhrBnygBVg8Q3OybbTpdmkAfW6ii+V/BO/UcO72kVsjXRnLQJH6G/U/BOu5qlwzPoNLuFKReF7t/CQ==}
+    peerDependencies:
+      '@capacitor/core': ^5.0.0
+    dependencies:
+      '@capacitor/core': 5.7.4
     dev: false
 
   /@emotion/is-prop-valid@0.8.8:
