@@ -5,8 +5,8 @@ import { MdOutlineRailwayAlert } from "react-icons/md";
 import { FaChildren } from "react-icons/fa6";
 import { GrUserFemale } from "react-icons/gr";
 import { FaBarsStaggered } from "react-icons/fa6";
-import { RxCross1 } from "react-icons/rx";
 import SideBar from "../components/SideBar";
+import { RxCross1 } from "react-icons/rx";
 
 const Home = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -18,33 +18,40 @@ const Home = () => {
             {/* Sidebar Toggle */}
             <div className='flex fixed w-full'>
                 <div
-                    className=' flex justify-start my-auto px-4 text-xl'
+                    className=' flex justify-start my-auto px-4 text-xl z-50'
                     onClick={handleSidebarToggle}
                 >
-                    {!showMenu ? (
-                        <FaBarsStaggered className=' transition-all ease-in-out duration-100' />
-                    ) : (
-                        <RxCross1 className=' transition-all ease-in-out duration-75' />
-                    )}
+                    {showMenu ? <RxCross1 /> : <FaBarsStaggered />}
                 </div>
-                <div className='t text-center w-screen py-2 text-2xl pr-4'>ANURAKSHA</div>
+                <div className='w-screen py-1 text-2xl font-bold flex justify-center'>
+                    <img
+                        src='https://anuraksha-bucket.s3.ap-south-1.amazonaws.com/assets/logo-english.png'
+                        alt='logo-main'
+                        className='h-12 pr-8'
+                    />
+                </div>
             </div>
-            <SideBar />
+            {showMenu && (
+                <SideBar
+                    setShowMenu={setShowMenu}
+                    showMenu={showMenu}
+                />
+            )}
             <div className='flex flex-col justify-between w-full h-screen items-center'>
                 {/* Map */}
-                <div className='h-2/3 w-full p-2 pt-10 rounded-lg'>
+                <div className='h-2/3 w-full p-2 pt-14 rounded-lg'>
                     <div className='h-full  w-full'>
                         <Map />
                     </div>
                 </div>
                 {/* Buttons */}
-                <div className='flex absolute z-30 top-[50%] justify-center items-center'>
-                    <button className=' bg-background-color relative cursor-pointer inline-flex items-center rounded-full px-10 py-12 text-3xl font-mono font-semibold text-rose-600  border-2 border-rose-600 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-75 hover:bg-rose-600 active:bg-rose-700 duration-300  focus:bg-transparent'>
+                <div className='flex absolute z-20 top-[51%] justify-center items-center'>
+                    <button className=' bg-red-800 border-red-900 relative cursor-pointer inline-flex items-center rounded-full px-12 py-14 text-3xl font-mono font-semibold text-white  border-2 border-rose-600 border-double active:scale-90 duration-150'>
                         SOS
                     </button>
                 </div>
                 {/* Other Menu */}
-                <div className='h-1/3 w-full px-2 py-2 z-40 bg-background-color'>
+                <div className='h-1/3 w-full px-2 py-2 z-30 bg-background-color'>
                     <div className='h-full  w-full grid grid-cols-3 gap-x-2 justify-center items-center'>
                         <div className='flex flex-col'>
                             <div className=' border border-primary flex items-center justify-center py-2 rounded-lg text-6xl'>
