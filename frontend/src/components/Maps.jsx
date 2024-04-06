@@ -1,48 +1,51 @@
-import React, { useEffect, useState } from "react";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import React, { useState, useEffect } from "react";
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
-const Map = () => {
-    const [map, setMap] = useState(null);
-    const [center, setCenter] = useState({ lat: 0, lng: 0 });
+// Replace with your actual Google Maps API key
+const API_KEY = "AIzaSyA3yNeTNL2GooUf0GKMkioJmG7QYa1HKDE";
 
-    // Function to get the device's current location
-    const getLocation = () => {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    setCenter({
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude,
-                    });
-                },
-                () => {
-                    // Handle errors
-                    console.error("Error getting the location");
-                }
-            );
-        } else {
-            console.error("Geolocation is not supported by this browser.");
-        }
-    };
+const libraries = ["places"];
+
+const mapContainerStyle = {
+    width: "400px", // Adjust as needed
+    height: "400px", // Adjust as needed
+};
+
+const Maps = () => {
+    const [currentLocation, setCurrentLocation] = useState(null);
 
     useEffect(() => {
-        getLocation();
-    }, []); // Run only once on component mount
+        // Get current location
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                setCurrentLocation({
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                });
+            },
+            (error) => {
+                console.error("Error getting current location:", error);
+            }
+        );
+    }, []);
+
+    const { isLoaded, loadError } = useLoadScript({
+        googleMapsApiKey: "AIzaSyA3yNeTNL2GooUf0GKMkioJmG7QYa1HKDE",
+        libraries,
+    });
+
+    if (loadError) return <div>Error loading maps</div>;
+    if (!isLoaded) return <div>Loading...</div>;
 
     return (
-        <div style={{ height: "550px", width: "100%" }}>
-            <LoadScript googleMapsApiKey='AIzaSyA3yNeTNL2GooUf0GKMkioJmG7QYa1HKDE'>
-                <GoogleMap
-                    mapContainerStyle={{ height: "100%", width: "100%" }}
-                    center={center}
-                    zoom={15}
-                    onLoad={(map) => setMap(map)}
-                >
-                    <Marker position={center} />
-                </GoogleMap>
-            </LoadScript>
-        </div>
+        <GoogleMap
+            mapContainerStyle={mapContainerStyle}
+            zoom={15}
+            center={currentLocation || { lat: 0, lng: 0 }} // Default to a general area if location is unavailable
+        >
+            {currentLocation && <Marker position={currentLocation} />}
+        </GoogleMap>
     );
 };
 
-export default Map;
+export default Maps;
