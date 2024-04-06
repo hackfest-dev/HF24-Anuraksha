@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const LogIn = () => {
     const [phoneNumber, setPhoneNumber] = useState("");
     const [showErrorMessage, setShowErrorMessage] = useState(false); // State for error message
     const [otpForm, showOtpForm] = useState(false); // State for OTP form [default: false
+    const navigate = useNavigate();
 
     const handleChange = (event) => {
         setPhoneNumber(event.target.value);
@@ -21,6 +23,10 @@ const LogIn = () => {
             console.log("Valid phone number:", phoneNumber);
         }
     };
+    const handleOtpSubmit = (event) => {
+        event.preventDefault();
+        navigate("/u1/register");
+    };
 
     return (
         <section className='px-24 sm:p-10 flex justify-center items-center w-full h-full overflow-hidden'>
@@ -33,19 +39,19 @@ const LogIn = () => {
                     {/* form */}
                     <div className=' flex flex-col gap-y-4 p-1'>
                         <h2 className=' text-2xl font-bold text-center'>SignIn</h2>
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={otpForm === true ? handleOtpSubmit : handleSubmit}>
                             <div className=' flex  flex-col gap-y-8 text-lg p-4 sm:p-4 rounded-xl '>
                                 <div className='flex flex-col text-center'>
                                     <label
-                                        htmlFor='email'
+                                        htmlFor='number'
                                         className=''
                                     >
                                         Mobile Number
                                     </label>
                                     <input
                                         type='number'
-                                        id='email'
-                                        name='email'
+                                        id='number'
+                                        name='number'
                                         className=' rounded-lg p-2   my-1 w-[80vw] sm:w-[40vw] mx-auto bg-transparent border-b-2 border-primary focus:outline-none focus:border-secondary'
                                         placeholder='Enter your 10 digit Number'
                                         value={phoneNumber}
