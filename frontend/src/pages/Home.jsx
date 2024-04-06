@@ -5,8 +5,28 @@ import { MdOutlineRailwayAlert } from "react-icons/md";
 import { FaChildren } from "react-icons/fa6";
 import { GrUserFemale } from "react-icons/gr";
 import Navbar from "../components/Navbar";
+import { CapacitorHttp } from '@capacitor/core';
 
 const Home = () => {
+    const latitude = "13.182976";
+    const longitude = "74.934208";
+    const user_id = 10;
+    const handleSos = async () => {
+        const options = {
+            url: "https://0e1b-115-243-167-82.ngrok-free.app/triggerSOS",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: "POST",
+            data: {
+                latitude: latitude,
+                longitude: longitude,
+                user_id: user_id,
+            },
+        };
+
+        const response = await CapacitorHttp.post(options);
+    };
     return (
         <section className=''>
             {/* Sidebar Toggle */}
@@ -21,7 +41,10 @@ const Home = () => {
                 </div>
                 {/* Buttons */}
                 <div className='flex z-20 justify-center items-center'>
-                    <button className=' bg-red-800 border-red-900 relative cursor-pointer inline-flex items-center rounded-full px-8 sm:px-12 py-10 sm:py-14 text-2xl sm:text-3xl font-mono font-semibold text-white  border-2 border-rose-600 border-double active:scale-90 duration-150'>
+                    <button
+                        onClick={handleSos}
+                        className=' bg-red-800 border-red-900 relative cursor-pointer inline-flex items-center rounded-full px-8 sm:px-12 py-10 sm:py-14 text-2xl sm:text-3xl font-mono font-semibold text-white  border-2 border-rose-600 border-double active:scale-90 duration-150'
+                    >
                         SOS
                     </button>
                 </div>

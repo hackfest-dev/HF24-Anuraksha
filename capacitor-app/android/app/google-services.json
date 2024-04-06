@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "112451388899",
+    "project_id": "anuraksha-sos",
+    "storage_bucket": "anuraksha-sos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112451388899:android:6d80bdc538b64db66f0cd6",
+        "android_client_info": {
+          "package_name": "com.anuraksha.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXVfup44BwfSJcqGMhVfUBm-bnMJTDjkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

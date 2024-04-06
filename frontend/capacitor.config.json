@@ -1,0 +1,14 @@
+{
+  "appId": "com.anuraksha.app",
+  "appName": "Anuraksha",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https",
+    "allowNavigation": ["0e1b-115-243-167-82.ngrok-free.app"]
+  },
+  "plugins": {
+    "CapacitorHttp": {
+      "enabled": true
+    }
+  }
+}
