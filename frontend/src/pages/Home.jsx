@@ -15,54 +15,18 @@ const Home = () => {
     const handleSos = async () => {
         const options = {
             url: "https://0e1b-115-243-167-82.ngrok-free.app/triggerSOS",
-            // headers: { 'X-Fake-Header': 'Fake-Value' },
-            data: JSON.stringify({
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: "POST",
+            data: {
                 latitude: latitude,
                 longitude: longitude,
                 user_id: user_id,
-            }),
+            },
         };
 
         const response = await CapacitorHttp.post(options);
-
-
-        // fetch("https://0e1b-115-243-167-82.ngrok-free.app/triggerSOS", {
-        //     method: "POST",
-        //     headers: {
-        //         "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify({
-        //         latitude,
-        //         longitude,
-        //         user_id,
-        //     }),
-        // })
-        //     .then((response) => {
-        //         // Handle success
-        //         console.log(response.data);
-        //     })
-        //     .catch((error) => {
-        //         // Handle error
-        //         console.log(error);
-        //     });
-
-        //             longitude,
-        //             user_id,
-        //         },
-        //         {
-        //             headers: {
-        //                 "Content-Type": "application/json",
-        //             },
-        //         }
-        //     )
-        //     .then((response) => {
-        //         // Handle success
-        //         console.log(response.data);
-        //     })
-        //     .catch((error) => {
-        //         // Handle error
-        //         console.log(error);
-        //     });
     };
     return (
         <section className=''>
