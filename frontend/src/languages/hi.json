@@ -1,5 +1,3 @@
-{}
-
 {
     "home": {
         "anuraksha": "अनुरक्षा",
@@ -55,9 +53,7 @@
         "register": "रजिस्टर",
         "phone number": "फ़ोन नंबर",
         "name": "नाम",
-        "enter your name": "
-
-अपना नाम दर्ज करें",
+        "enter your name": "अपना नाम दर्ज करें",
         "date of birth": "जन्म तिथि",
         "gender": "लिंग",
         "please select": "कृपया चुनें",
