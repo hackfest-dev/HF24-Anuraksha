@@ -21,7 +21,7 @@ const Navbar = () => {
                     <img
                         src='https://anuraksha-bucket.s3.ap-south-1.amazonaws.com/assets/logo-english.png'
                         alt='logo-main'
-                        className='h-12 pr-8'
+                        className='h-12 pr-12'
                     />
                 </div>
             </div>
