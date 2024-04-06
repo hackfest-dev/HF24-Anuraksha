@@ -6,8 +6,6 @@
 ![Contributors](https://img.shields.io/badge/contributors-3-darkgreen)
 [![Anuraksha](https://img.shields.io/static/v1?label=Hackfest2024&message=Anuraksha&color=blue&logo=github)](https://github.com/hackfest-dev/HF24-Anuraksha)
 ![Maintained - yes](https://img.shields.io/badge/Maintained-yes-green)
-[![issues](https://img.shields.io/badge/issues-yellow)](https://github.com/hackfest-dev/HF24-Anuraksha/issues)
-
 
 # Team Anuraksha
 ## PES University Electronic City Campus, Bengaluru
