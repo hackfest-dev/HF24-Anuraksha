@@ -1,7 +1,8 @@
 const express = require('express');
 
-const UserController = require('./controllers/userController');
+const AuthController = require('./controllers/authController');
 const SOSController = require('./controllers/SOSController');
+const UserController = require('./controllers/userController');
 
 const verifyTokenMiddleware = require('./middleware/verifyToken');
 
@@ -11,10 +12,10 @@ router.get('/', async (req, res) => {
   res.status(200).json({ status: 200, Message: 'Hello. Backend is up!' });
 });
 
-router.post('/login', UserController.handleLogin);
-router.post('/register', UserController.handleRegister);
+router.post('/login', AuthController.handleLogin);
+router.post('/register', AuthController.handleRegister);
 
-router.post('/onboarding', UserController.handleOnboarding);
+router.post('/onboarding', AuthController.handleOnboarding);
 
 router.post(
   '/toggleVolunteerStatus',
@@ -23,9 +24,16 @@ router.post(
 );
 
 router.post(
-  'triggersos',
+  '/triggerSOS',
   verifyTokenMiddleware,
   SOSController.handleSOSTrigger
+);
+
+router.get('/profile', verifyTokenMiddleware, UserController.handleGetProfile);
+router.get(
+  '/SOSHistory',
+  verifyTokenMiddleware,
+  SOSController.handleGetSOSHistory
 );
 
 module.exports = router;
