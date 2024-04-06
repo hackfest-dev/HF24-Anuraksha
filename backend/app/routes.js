@@ -1,19 +1,16 @@
 const express = require('express');
 
-// const OTPController = require('./controllers/OTPController');
+const UserController = require('./controllers/userController');
 
-// const verifyTokenMiddleware = require('./middleware/verifyToken');
+const verifyTokenMiddleware = require('./middleware/verifyToken');
 
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-  res.status(200).json({ status: 200, Message: 'Hello' });
+  res.status(200).json({ status: 200, Message: 'Hello. Backend is up!' });
 });
 
-router.get(
-  '/getSubmissions',
-  verifyTokenMiddleware,
-  submissionController.handleGetSubmissions
-);
+router.get('/login', UserController.handleLogin);
+router.get('/register', UserController.handleRegister);
 
 module.exports = router;
