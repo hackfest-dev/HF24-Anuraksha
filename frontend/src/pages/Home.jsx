@@ -1,14 +1,35 @@
+import { useState, useRef } from "react";
 import Map from "../components/Maps";
 import { GiPoliceOfficerHead, GiSmallFire, GiAmbulance } from "react-icons/gi";
+import { MdOutlineRailwayAlert } from "react-icons/md";
+import { FaChildren } from "react-icons/fa6";
+import { GrUserFemale } from "react-icons/gr";
+import { FaBarsStaggered } from "react-icons/fa6";
+import { RxCross1 } from "react-icons/rx";
+import SideBar from "../components/SideBar";
 
 const Home = () => {
+    const [showMenu, setShowMenu] = useState(false);
+    const handleSidebarToggle = () => {
+        setShowMenu(!showMenu);
+    };
     return (
         <section className=''>
             {/* Sidebar Toggle */}
             <div className='flex fixed w-full'>
-                <div className=' flex justify-start'>sid</div>
-                <div className='t text-center w-screen py-2 text-2xl'>ANURAKSHA</div>
+                <div
+                    className=' flex justify-start my-auto px-4 text-xl'
+                    onClick={handleSidebarToggle}
+                >
+                    {!showMenu ? (
+                        <FaBarsStaggered className=' transition-all ease-in-out duration-100' />
+                    ) : (
+                        <RxCross1 className=' transition-all ease-in-out duration-75' />
+                    )}
+                </div>
+                <div className='t text-center w-screen py-2 text-2xl pr-4'>ANURAKSHA</div>
             </div>
+            <SideBar />
             <div className='flex flex-col justify-between w-full h-screen items-center'>
                 {/* Map */}
                 <div className='h-2/3 w-full p-2 pt-10 rounded-lg'>
@@ -45,21 +66,21 @@ const Home = () => {
                         </div>
                         <div className='flex flex-col'>
                             <div className=' border border-primary flex items-center justify-center py-2 rounded-lg text-6xl'>
-                                <GiPoliceOfficerHead />
+                                <MdOutlineRailwayAlert />
                             </div>
-                            <p className='text-center'>Police</p>
+                            <p className='text-center'>Railway related Issue</p>
                         </div>
                         <div className='flex flex-col'>
                             <div className=' border border-primary flex items-center justify-center py-2 rounded-lg text-6xl'>
-                                <GiPoliceOfficerHead />
+                                <FaChildren />
                             </div>
-                            <p className='text-center'>Police</p>
+                            <p className='text-center text-wrap'>Child related Issues</p>
                         </div>
                         <div className='flex flex-col'>
                             <div className=' border border-primary flex items-center justify-center py-2 rounded-lg text-6xl'>
-                                <GiPoliceOfficerHead />
+                                <GrUserFemale />
                             </div>
-                            <p className='text-center'>Police</p>
+                            <p className='text-center'>Women security issue</p>
                         </div>
                     </div>
                 </div>
