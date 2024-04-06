@@ -1,0 +1,16 @@
+{
+    "home": {
+        "anuraksha": "Anuraksha",
+        "map": "Map",
+        "satellite": "Satellite",
+        "police": "Police",
+        "fire brigade": "Fire Brigade",
+        "ambulance": "Ambulance",
+        "railway related issues": "Railway related Issues",
+        "child related issues": "Child related Issues",
+        "women security issues": "Women security Issues"
+    },
+    "sidebar": {
+        
+    }
+}
