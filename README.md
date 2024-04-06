@@ -2,7 +2,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/hackfest-dev/HF24-Anuraksha">
-    <img src="https://anuraksha-bucket.s3.ap-south-1.amazonaws.com/assets/Anuraksha+Banner.png" alt="Logo" width="80" height="80">
+    <img src="https://anuraksha-bucket.s3.ap-south-1.amazonaws.com/assets/Anuraksha+Banner.png" alt="Logo">
   </a>
 
   <h1 align="center">Anuraksha</h1>
