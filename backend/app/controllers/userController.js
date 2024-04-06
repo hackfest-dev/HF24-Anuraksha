@@ -1,10 +1,15 @@
-const { pool } = require('../config/db');
+const { pool } = require('../config/db.config');
 const jwt = require('jsonwebtoken');
 const JWT_SECRET = process.env.JWT_SECRET;
 
 exports.handleLogin = async (req, res) => {
   try {
-    const { phone } = req.body;
+    const { phone, is_verified } = req.body;
+    if (!is_verified)
+      return res
+        .status(401)
+        .json({ status: 401, message: 'User is not verified' });
+
     const user = await pool.query('SELECT * FROM users WHERE phone = $1', [
       phone,
     ]);
@@ -19,17 +24,28 @@ exports.handleLogin = async (req, res) => {
       {
         user_id: user.user_id,
         name: user.username,
-        role: user.role,
-        email: user.email,
         phone: user.phone,
+        state: user.state,
+        is_volunteer: user.is_volunteer,
       },
       JWT_SECRET,
       { expiresIn: '1h' }
     );
 
-    return res
-      .status(200)
-      .json({ status: 200, message: 'Login successful', data: { token } });
+    return res.status(200).json({
+      status: 200,
+      message: 'Login successful',
+      data: {
+        user: {
+          user_id: user.user_id,
+          name: user.username,
+          phone: user.phone,
+          state: user.state,
+          is_volunteer: user.is_volunteer,
+        },
+        token,
+      },
+    });
   } catch (err) {
     console.log(err);
     return res.status(500).json({
@@ -48,8 +64,33 @@ exports.handleRegister = async (req, res) => {
       'INSERT INTO users (name, phone, dob, gender, state, current_location, is_volunteer) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *',
       [name, phone, dob, gender, state, current_location, is_volunteer]
     );
+    console.log(user);
+    return res.status(200).json({
+      status: 200,
+      message: 'User created',
+      user_id: user.rows[0].user_id,
+    });
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json({
+      status: 500,
+      message: 'Internal server error',
+      description: err,
+    });
+  }
+};
 
-    return res.status(200).json({ status: 200, message: 'User created' });
+exports.handleOnboarding = async (req, res) => {
+  try {
+    const { user_id, contactDetails } = req.body;
+    const user = await pool.query(
+      'INSERT INTO users (name, phone, dob, gender, state, current_location, is_volunteer) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *',
+      [name, phone, dob, gender, state, current_location, is_volunteer]
+    );
+
+    return res
+      .status(200)
+      .json({ status: 200, message: 'User Onboarding Successful' });
   } catch (err) {
     console.log(err);
     return res.status(500).json({
