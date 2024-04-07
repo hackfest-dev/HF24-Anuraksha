@@ -4,7 +4,11 @@
   "webDir": "dist",
   "server": {
     "androidScheme": "https",
-    "allowNavigation": ["0e1b-115-243-167-82.ngrok-free.app"]
+    "allowNavigation": [
+      "0e1b-115-243-167-82.ngrok-free.app",
+      "verify.twilio.com/v2/Services/VA1faf08387222a9faafa4ab851f7e7352/Verifications",
+      "verify.twilio.com/v2/Services/VA1faf08387222a9faafa4ab851f7e7352/VerificationCheck"
+    ]
   },
   "plugins": {
     "CapacitorHttp": {

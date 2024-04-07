@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 const Register = () => {
-    const handleChange = (event) => {};
+    const handleChange = (event) => { };
 
     const navigate = useNavigate();
     const handleSubmit = (event) => {
         event.preventDefault();
-        navigate("/");
+        navigate("/home");
     };
 
     return (

@@ -73,7 +73,7 @@ export default function Sidebar({ showMenu, setShowMenu }) {
                 <List>
                     <ListItem
                         onClick={() => {
-                            navigate("/");
+                            navigate("/home");
                             setShowMenu(false);
                         }}
                     >
@@ -132,7 +132,7 @@ export default function Sidebar({ showMenu, setShowMenu }) {
                     </ListItem>
                     <ListItem
                         onClick={() => {
-                            navigate("/login");
+                            navigate("/");
                             setShowMenu(false);
                         }}
                     >

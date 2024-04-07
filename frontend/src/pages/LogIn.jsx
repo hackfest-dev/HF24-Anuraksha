@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import { capacitorHttp } from "@capacitor/core";
+import { CapacitorHttp } from '@capacitor/core';
+
+
 const LogIn = () => {
     const [phoneNumber, setPhoneNumber] = useState("");
     const [otp, setOtp] = useState(""); // State for OTP [default: ""
@@ -24,26 +26,25 @@ const LogIn = () => {
         const formattedPhoneNumber = "+91" + phoneNumber;
 
         try {
-            const response = await fetch(
-                "https://verify.twilio.com/v2/Services/VA1faf08387222a9faafa4ab851f7e7352/Verifications",
-                {
-                    method: "POST",
-                    body: new URLSearchParams({
-                        To: formattedPhoneNumber,
-                        Channel: "sms",
-                    }),
-                    headers: {
-                        Authorization:
-                            "Basic " +
-                            btoa(
-                                "AC39a709bca877af451d9767d92dc08de9:6333ad2d635cb392ef334956745c6b87"
-                            ), // Your Twilio Account SID and Auth Token (base64 encoded)
-                        "Content-Type": "application/x-www-form-urlencoded",
-                    },
-                }
-            );
+            const options = {
+                url: "https://verify.twilio.com/v2/Services/VA1faf08387222a9faafa4ab851f7e7352/Verifications",
+                headers: {
+                    Authorization: "Basic " +
+                        btoa(
+                            "AC39a709bca877af451d9767d92dc08de9:6333ad2d635cb392ef334956745c6b87"
+                        ),
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                method: "POST",
+                data: {
+                    To: formattedPhoneNumber,
+                    Channel: "sms",
+                },
+            };
 
-            if (response.ok) {
+            const response = await CapacitorHttp.post(options);
+
+            if (response) {
                 console.log("Verification code sent!");
                 showOtpForm(true); // Show OTP form on successful verification
             } else {
@@ -58,26 +59,25 @@ const LogIn = () => {
         const formattedPhoneNumber = "+91" + phoneNumber;
 
         try {
-            const response = await fetch(
-                "https://verify.twilio.com/v2/Services/VA1faf08387222a9faafa4ab851f7e7352/VerificationCheck",
-                {
-                    method: "POST",
-                    body: new URLSearchParams({
-                        To: formattedPhoneNumber,
-                        Code: otp,
-                    }),
-                    headers: {
-                        Authorization:
-                            "Basic " +
-                            btoa(
-                                "AC39a709bca877af451d9767d92dc08de9:6333ad2d635cb392ef334956745c6b87"
-                            ),
-                        "Content-Type": "application/x-www-form-urlencoded",
-                    },
-                }
-            );
+            const options = {
+                url: "https://verify.twilio.com/v2/Services/VA1faf08387222a9faafa4ab851f7e7352/VerificationCheck",
+                headers: {
+                    Authorization: "Basic " +
+                        btoa(
+                            "AC39a709bca877af451d9767d92dc08de9:6333ad2d635cb392ef334956745c6b87"
+                        ),
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                method: "POST",
+                data: {
+                    To: formattedPhoneNumber,
+                    Code: otp,
+                },
+            };
 
-            if (response.ok) {
+            const response = await CapacitorHttp.post(options);
+
+            if (response) {
                 console.log("Verification successful!");
                 navigate("/register");
                 localStorage.setItem("phoneNumber", phoneNumber);
@@ -134,9 +134,8 @@ const LogIn = () => {
 
                                 <button
                                     type='submit'
-                                    className={` bg-secondary disabled:bg-gray-300 active:bg-primary p-2 rounded-full  ${
-                                        otpForm && "hidden"
-                                    }`}
+                                    className={` bg-secondary disabled:bg-gray-300 active:bg-primary p-2 rounded-full  ${otpForm && "hidden"
+                                        }`}
                                     disabled={!isValidNumber} // Disable button if invalid
                                 >
                                     Get OTP
@@ -165,9 +164,8 @@ const LogIn = () => {
                                     </div>
                                     <button
                                         type='submit'
-                                        className={` bg-secondary disabled:bg-gray-300 active:bg-primary p-2 py-4 rounded-full flex justify-center w-full ${
-                                            !otpForm && "hidden"
-                                        }`}
+                                        className={` bg-secondary disabled:bg-gray-300 active:bg-primary p-2 py-4 rounded-full flex justify-center w-full ${!otpForm && "hidden"
+                                            }`}
                                     >
                                         Verify OTP
                                     </button>
