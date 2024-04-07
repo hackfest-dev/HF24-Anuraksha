@@ -15,11 +15,11 @@ const App = () => {
         <BrowserRouter>
             <Routes>
                 <Route
-                    path='/'
+                    path='/home'
                     element={<Home />}
                 />
                 <Route
-                    path='/login'
+                    path='/'
                     element={<LogIn />}
                 />
                 <Route
@@ -27,7 +27,7 @@ const App = () => {
                     element={<Register />}
                 />
                 <Route
-                    path='/:uId/onboarding'
+                    path='/onboarding'
                     element={<OnBoarding />}
                 />
                 <Route

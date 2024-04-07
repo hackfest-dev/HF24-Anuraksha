@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { CapacitorHttp } from '@capacitor/core';
+
+
 const LogIn = () => {
     const [phoneNumber, setPhoneNumber] = useState("");
     const [otp, setOtp] = useState(""); // State for OTP [default: ""
@@ -15,21 +18,77 @@ const LogIn = () => {
     };
     const isValidNumber = phoneNumber.length === 10 && /^\d+$/.test(phoneNumber);
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    const handleSubmit = async (event) => {
+        event.preventDefault(); // Prevent default form submission
 
-        if (!isValidNumber) {
-            setShowErrorMessage(true); // Show error message on invalid submit
-        } else {
-            // Proceed with OTP logic
-            showOtpForm(true);
+        // Get the phone number from the form
+        // Format the phone number with country code for Twilio
+        const formattedPhoneNumber = "+91" + phoneNumber;
 
-            localStorage.setItem("phoneNumber", phoneNumber);
+        try {
+            const options = {
+                url: "https://verify.twilio.com/v2/Services/VA1faf08387222a9faafa4ab851f7e7352/Verifications",
+                headers: {
+                    Authorization: "Basic " +
+                        btoa(
+                            "AC39a709bca877af451d9767d92dc08de9:6333ad2d635cb392ef334956745c6b87"
+                        ),
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                method: "POST",
+                data: {
+                    To: formattedPhoneNumber,
+                    Channel: "sms",
+                },
+            };
+
+            const response = await CapacitorHttp.post(options);
+
+            if (response) {
+                console.log("Verification code sent!");
+                showOtpForm(true); // Show OTP form on successful verification
+            } else {
+                console.error("Error sending verification:", response.status);
+            }
+        } catch (error) {
+            console.error("Error:", error);
         }
     };
-    const handleOtpSubmit = (event) => {
-        event.preventDefault();
-        navigate("/register");
+    const handleOtpSubmit = async (event) => {
+        event.preventDefault(); // Prevent default form submission
+        const formattedPhoneNumber = "+91" + phoneNumber;
+
+        try {
+            const options = {
+                url: "https://verify.twilio.com/v2/Services/VA1faf08387222a9faafa4ab851f7e7352/VerificationCheck",
+                headers: {
+                    Authorization: "Basic " +
+                        btoa(
+                            "AC39a709bca877af451d9767d92dc08de9:6333ad2d635cb392ef334956745c6b87"
+                        ),
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                method: "POST",
+                data: {
+                    To: formattedPhoneNumber,
+                    Code: otp,
+                },
+            };
+
+            const response = await CapacitorHttp.post(options);
+
+            if (response) {
+                console.log("Verification successful!");
+                navigate("/register");
+                localStorage.setItem("phoneNumber", phoneNumber);
+                // Handle successful verification
+            } else {
+                console.error("Verification failed:", response.status);
+                // Handle failed verification
+            }
+        } catch (error) {
+            console.error("Error:", error);
+        }
     };
 
     return (
@@ -47,7 +106,7 @@ const LogIn = () => {
                     {/* form */}
                     <div className=' flex flex-col gap-y-4 p-1'>
                         <h2 className=' text-2xl font-bold text-center'>SignIn</h2>
-                        <form onSubmit={otpForm === true ? handleOtpSubmit : handleSubmit}>
+                        <form onSubmit={handleSubmit}>
                             <div className=' flex  flex-col gap-y-8 text-lg p-4 sm:p-4 rounded-xl '>
                                 <div className='flex flex-col text-center'>
                                     <label
@@ -72,11 +131,24 @@ const LogIn = () => {
                                         </p>
                                     )}
                                 </div>
-                                {otpForm && (
+
+                                <button
+                                    type='submit'
+                                    className={` bg-secondary disabled:bg-gray-300 active:bg-primary p-2 rounded-full  ${otpForm && "hidden"
+                                        }`}
+                                    disabled={!isValidNumber} // Disable button if invalid
+                                >
+                                    Get OTP
+                                </button>
+                            </div>
+                        </form>
+                        {otpForm && (
+                            <form onSubmit={handleOtpSubmit}>
+                                <div className='flex flex-col gap-y-4'>
                                     <div className='flex flex-col text-center'>
                                         <label
                                             htmlFor='otp'
-                                            className=''
+                                            className=' font-semibold text-xl'
                                         >
                                             OTP
                                         </label>
@@ -90,16 +162,16 @@ const LogIn = () => {
                                             onChange={OtphandleChange}
                                         />
                                     </div>
-                                )}
-                                <button
-                                    type='submit'
-                                    className=' bg-secondary disabled:bg-gray-300 active:bg-primary p-2 rounded-full'
-                                    disabled={!isValidNumber} // Disable button if invalid
-                                >
-                                    {otpForm ? "Verify OTP" : "Get OTP"}
-                                </button>
-                            </div>
-                        </form>
+                                    <button
+                                        type='submit'
+                                        className={` bg-secondary disabled:bg-gray-300 active:bg-primary p-2 py-4 rounded-full flex justify-center w-full ${!otpForm && "hidden"
+                                            }`}
+                                    >
+                                        Verify OTP
+                                    </button>
+                                </div>
+                            </form>
+                        )}
                     </div>
                 </div>
             </div>

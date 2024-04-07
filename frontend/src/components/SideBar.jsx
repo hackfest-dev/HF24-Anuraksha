@@ -67,13 +67,13 @@ export default function Sidebar({ showMenu, setShowMenu }) {
                             />
                         </svg>
 
-                        <p>User</p>
+                        <p>Sarthak</p>
                     </div>
                 </div>
                 <List>
                     <ListItem
                         onClick={() => {
-                            navigate("/");
+                            navigate("/home");
                             setShowMenu(false);
                         }}
                     >
@@ -132,7 +132,7 @@ export default function Sidebar({ showMenu, setShowMenu }) {
                     </ListItem>
                     <ListItem
                         onClick={() => {
-                            navigate("/login");
+                            navigate("/");
                             setShowMenu(false);
                         }}
                     >

@@ -2,15 +2,54 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 const Register = () => {
     const [selectedGender, setSelectedGender] = useState("");
+    const [volunteer, setIsVolunteer] = useState(false);
 
     const handleChange = (event) => {
         setSelectedGender(event.target.value);
     };
 
     const navigate = useNavigate();
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        navigate("/u1/onboarding");
+        const formData = new FormData(event.target);
+        const phone = localStorage.getItem("phoneNumber");
+        const name = formData.get("name");
+        const dob = formData.get("DoB");
+        const gender = selectedGender;
+        const is_volunteer = true;
+
+        const data = {
+            name,
+            phone,
+            dob,
+            gender,
+            state: "Karnataka",
+            current_location: "Bangalore",
+            is_volunteer,
+            language: "English",
+        };
+        console.log(data);
+
+        try {
+            const response = await fetch("https://4b34-117-236-190-193.ngrok-free.app/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                // Handle successful response
+                navigate("/onboarding");
+            } else {
+                // Handle error response
+                console.error("Registration failed");
+            }
+        } catch (error) {
+            // Handle network error
+            console.error("Network error:", error);
+        }
     };
 
     return (
@@ -92,8 +131,8 @@ const Register = () => {
                                         className=' bg-transparent rounded-lg border-b border-primary'
                                     >
                                         <option value=''>Please select</option>
-                                        <option value='male'>Male</option>
-                                        <option value='female'>Female</option>
+                                        <option value='Male'>Male</option>
+                                        <option value='Female'>Female</option>
                                     </select>
                                 </div>
                                 <div className='flex justify-between'>
@@ -103,6 +142,8 @@ const Register = () => {
                                             className='sr-only peer'
                                             value=''
                                             type='checkbox'
+                                            name='volunteer'
+                                            onChange={() => setIsVolunteer(!volunteer)}
                                         />
                                         <div className="peer rounded-full outline-none duration-100 after:duration-500 w-20 h-8 bg-blue-300 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-500  after:content-['No'] after:absolute after:outline-none after:rounded-full after:h-6 after:w-6 after:bg-white after:top-1 after:left-1 after:flex after:justify-center after:items-center  after:text-sky-800 after:font-bold peer-checked:after:translate-x-12 peer-checked:after:content-['Yes'] peer-checked:after:border-white"></div>
                                     </label>

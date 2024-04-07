@@ -13,7 +13,7 @@ const Home = () => {
     const user_id = 10;
     const handleSos = async () => {
         const options = {
-            url: "https://0e1b-115-243-167-82.ngrok-free.app/triggerSOS",
+            url: "https://4b34-117-236-190-193.ngrok-free.app/triggerSOS",
             headers: {
                 'Content-Type': 'application/json',
             },
