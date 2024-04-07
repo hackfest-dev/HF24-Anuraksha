@@ -27,7 +27,7 @@ const App = () => {
                     element={<Register />}
                 />
                 <Route
-                    path='/:uId/onboarding'
+                    path='/onboarding'
                     element={<OnBoarding />}
                 />
                 <Route

@@ -67,7 +67,7 @@ export default function Sidebar({ showMenu, setShowMenu }) {
                             />
                         </svg>
 
-                        <p>User</p>
+                        <p>Sarthak</p>
                     </div>
                 </div>
                 <List>
